@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sej Sanghvi Portfolio Website"
+    />
+    <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
+    
+    <link rel="stylesheet" href="artstyle.css">
+  </head>
+  <body>
+    <div>
+    <div class="overlay"></div>
+    <div class="menu-bar">
+        <div class="left">
+            <span class="name"><a href="art.html">SEJ SANGHVI</a></span>
+        </div>
+        <div class="right">
+            <a href="artabout.html">ABOUT</a>
+            <div class="work">
+                <a href="index.html">DESIGN</a>
+                <a href="art.html">ART</a>
+            </div>
+        </div>
+    </div>
+    <div class="below-bar">
+        <div class="left">
+            <span class="name"><i>Pause,<br> 
+            Take a pause<br> 
+            to breathe<br>
+             <br>
+            Feel, <br>                    
+            Feel<br> 
+            your body  <br>
+            <br>
+            Rest,<br>                        
+            Let <br>
+            your soul<br>
+            catch up <br>
+            </i>
+
+</span>
+        </div>
+      </div>
+    <div class="click">
+      <span ><i> < click anywhere > </i></span>
+    </div> 
+    </div>
+    <script>
+   let clickCount = 0;
+let firstImageElement = null;
+let secondImageElement = null;
+let thirdImageElement = null;
+
+document.addEventListener('click', function(event) {
+  // Hide the below-bar on the first click
+  if (clickCount === 0) {
+    const belowBar = document.querySelector('.below-bar');
+    if (belowBar) {
+      belowBar.style.display = 'none';
+    }
+  }
+
+  // Remove existing images if they are present
+  if (firstImageElement) {
+    document.body.removeChild(firstImageElement);
+    firstImageElement = null;
+  }
+  if (secondImageElement) {
+    document.body.removeChild(secondImageElement);
+    secondImageElement = null;
+  }
+  if (thirdImageElement) {
+    document.body.removeChild(thirdImageElement);
+    thirdImageElement = null;
+  }
+
+  if (clickCount === 0 || clickCount === 3) {
+    // Show Image 1 on the right side
+    const imageUrl1 = 'ArtImages/Sanghvi_Sej 03.png';
+    firstImageElement = document.createElement('a');
+    firstImageElement.href = 'shade.html'; // Set the URL of the first page
+    const image1 = document.createElement('img');
+    image1.src = imageUrl1;
+    image1.style.width = '500px';
+    firstImageElement.appendChild(image1);
+    firstImageElement.style.position = 'fixed';
+    firstImageElement.style.top = '150px';
+    firstImageElement.style.right = '150px';
+    document.body.appendChild(firstImageElement);
+  } else if (clickCount === 1) {
+    // Show Image 2 on the left side
+    const imageUrl2 = 'ArtImages/Meditate.png';
+    secondImageElement = document.createElement('a');
+    secondImageElement.href = 'meditate.html'; // Set the URL of the second page
+    const image2 = document.createElement('img');
+    image2.src = imageUrl2;
+    image2.style.width = '700px';
+    secondImageElement.appendChild(image2);
+    secondImageElement.style.position = 'fixed';
+    secondImageElement.style.top = '250px';
+    secondImageElement.style.left = '200px';
+    document.body.appendChild(secondImageElement);
+  } else if (clickCount === 2) {
+    // Show Image 3
+    const imageUrl3 = 'ArtImages/Thread.png';
+    thirdImageElement = document.createElement('a');
+    thirdImageElement.href = 'thread.html'; // Set the URL of the third page
+    const image3 = document.createElement('img');
+    image3.src = imageUrl3;
+    image3.style.width = '300px';
+    thirdImageElement.appendChild(image3);
+    thirdImageElement.style.position = 'fixed';
+    thirdImageElement.style.top = '50px';
+    thirdImageElement.style.left = '200px';
+    document.body.appendChild(thirdImageElement);
+  }
+
+  // Increment click count and reset if it reaches 4 (to cycle through images)
+  clickCount++;
+  if (clickCount > 3) {
+    clickCount = 0;
+  }
+});
+
+
+</script>
+  </body>
+</html>

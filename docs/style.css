@@ -1,0 +1,627 @@
+body {
+  font-family: Helvetica;
+margin: 0;
+padding: 0;
+overflow: hidden; /* Hide body overflow */
+color: white;
+background-color: black;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+position: relative;
+}
+
+body {
+overflow-y: scroll; /* Always show vertical scrollbar */
+}
+
+canvas {
+  position: fixed; /* Position the canvas to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.menu-bar,
+.below-bar, .grid-containerA, .grid-containerB, .grid-containerC,.bottom, .bio, .resume {
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 10px 20px;
+position: relative;
+z-index: 1; /* Place menu bar and below bar above canvas */
+background-color: transparent;
+
+}
+
+.menu-bar {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+       padding: 10px 20px;
+       background-color: transparent;
+       padding-bottom: 30px;
+       
+  }
+  .menu-bar .left {
+      flex-grow: 1;
+      align-items: left;
+       margin-top:1px;
+       margin-left: 40px;
+  }
+  .menu-bar .right {
+      display: flex;
+      margin-top:1px;
+      margin-right:30px;
+  }
+  .menu-bar a {
+      color: white; /* Set link text color to white */
+      text-decoration: none;
+      padding-right: 100px;
+  }
+  .work {
+      align-items: right;
+      padding-right: 0px;
+      margin-top: 1px;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .below-bar {
+  background-color: transparent; /* Set below bar background to transparent */
+  height: 300px;
+}
+
+  
+  .below-bar {
+    width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      margin-top:-180px;
+      margin-bottom:35px ;
+       /* Set background color of menu bar */
+  }
+  hr {
+      border: none;
+      border-top: none;
+      margin-top: 300px;
+      margin-bottom: 200px;
+  }
+
+
+  .below-bar .left {
+    margin-top: 0px;
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 40px;
+
+
+  }
+  .below-bar .right {
+    display: flex;
+      text-align: right;
+      margin-top: -10px;
+      margin-left: 40%;
+    font-style: italic;
+  }
+
+  .below-bar span {
+      color: white; /* Set span text color to white */
+      text-decoration: none;
+      margin-right: 40px;
+
+  }
+
+  img {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height:auto;
+}
+
+  .grid-containerA{
+    width:auto;
+    justify-content: space-between;
+    justify-items: center;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr); 
+    grid-template-rows:repeat(1, 1fr);
+    grid-gap: 20px; /* Gap between grid items */
+    padding: none;
+    margin:0 ;
+}
+
+ .grid-item1{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:1 ;
+  grid-column-end:2;
+ }
+
+ .grid-item2{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:2 ;
+  grid-column-end:3 ;
+ }
+
+.grid-containerB{
+    width:auto;
+    justify-content: space-between;
+    justify-items: center;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
+    grid-template-rows:repeat(1, 1fr);
+    grid-gap: 20px; /* Gap between grid items */
+    padding: none;
+    margin:0 ;
+}
+.grid-item3{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:1 ;
+  grid-column-end:2;
+}
+
+.grid-item4{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:2 ;
+  grid-column-end:3;
+}
+
+.grid-item5{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:3 ;
+  grid-column-end:4;
+}
+
+.grid-containerC {
+  width: 100%;
+  margin: 0; /* Center horizontally */
+  margin-left:21% ;
+  margin-right:21%;
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.grid-containerC img {
+  margin: auto;
+  width: 58%; /* Adjust the width as needed */
+}
+
+
+.grid-containerA p, .grid-containerB p, .grid-containerC p {
+    font-size: 13px;
+    line-height: 1.5;
+    color:white;
+}
+.grid-containerA a, .grid-containerB a, .grid-containerC a{
+  text-decoration: none;
+}
+
+
+.bottom span {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width:40%;
+  z-index: 1;
+  text-align: center;
+  color:white;
+  margin-bottom: 300px;
+  font-size: 13px;
+  line-height: 1.5
+}
+.bottom span a{
+  color: white;
+  text-decoration: none;
+
+}
+.aboutme{
+  width:100%;
+    justify-content: space-between;
+    display: grid;
+     grid-template-columns:repeat(5, 1fr); 
+    grid-template-rows:repeat(1, 1fr);
+    grid-gap: 20px; /* Gap between grid items */
+    padding: 100px;
+    margin:auto ;
+}
+
+.profile{
+  grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:1 ;
+  grid-column-end:2;
+}
+
+.bio{
+ grid-row-start:1 ;
+  grid-row-end:2 ;
+  grid-column-start:1 ;
+  grid-column-end:4; 
+}
+
+.bio {
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the bio horizontally */
+  padding-bottom: 50px; /* Add space at the bottom of the bio */
+}
+
+.bio p {
+  font-size: 18px; /* Adjust font size for paragraphs */
+  line-height: 1.5; /* Increase line height for better readability */
+}
+
+.resume span{
+  margin-top: -100px;
+  margin-left: 170px;
+  margin-right: auto;
+  width:40%;
+  z-index: 1;
+  text-align: left;
+  color:white;
+  margin-bottom: 300px;
+  font-size: 18px;
+  line-height: 1.5
+}
+.resume span a{
+  color: white;
+  text-decoration: none;
+}
+.cover p {
+  width: 50%;
+  margin-left: 45%;
+  text-align: left;
+  color:white;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 20px;
+  line-height: 1.5
+}
+.book{
+  margin-top: 100px;
+  margin-bottom: 300px;
+  line-height: 1.5
+}
+.poster-grid{
+  margin-left: 80px;
+  margin-top: 100px;
+  margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns flex items to the end (right side) */
+}
+
+.Poster-1 img, .Poster-2 img, .Poster-3 img{
+  width:40%;
+}
+
+.Poster-1 img{
+  float: right;
+}
+
+Poster-3{
+  float: left;
+}
+
+.AD-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto; /* Center align horizontally */
+  width: 82%; /* Adjusted width */
+}
+
+.AD-edit {
+  background-color: #202020; /* Change to dark grey */
+  border-radius: 10px;
+  width: 45%; /* Adjusted width for both items */
+  height: auto;
+  margin: 20px auto; /* Added margin */
+  padding: 20px; /* Adjusted padding */
+  text-align: left; /* Left-align text content */
+  font-size: 20px;
+  line-height: 1.5;
+}
+.UXA-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.UXA-edit {
+  width: 40%; /* Adjusted width for each item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto; /* Adjusted margin */
+}
+
+.UXA-edit img {
+  width: 100%; /* Adjusted width for images */
+}
+
+.UXA-container2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.UXA-edit2 {
+  width: 40%; /* Adjusted width for each item */
+  display: flex;
+  flex-direction: column;
+  margin: auto; /* Adjusted margin */
+}
+
+.inT{
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.inN{
+  font-size: 55px;
+  margin-top: 0px;
+ 
+}
+
+
+.Takeaway{
+    width: auto;
+    justify-content: space-between;
+/*    justify-items: center;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 30px; /* Gap between grid items */
+    padding: 0px;
+    margin: 60px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.Takeaway h3{
+  font-size: 25px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.takeaway-A h3, .takeaway-B h3{
+  font-size: 20px;
+  display: flex;
+  justify-items: center;
+  align-text:center;
+  margin: 45px;
+  margin-bottom: 20px;
+}
+
+.S1{
+  margin: auto;
+  font-size: 17px;
+  background-color: #202020 ; /* Change to darkgrey */
+  border-radius: 10px;
+  width: 80%;
+  height: 75px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  justify-items: center;
+
+}
+
+.takeaway-A{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.takeaway-B{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.flow{
+  display: flex; /* Use flexbox */
+  flex-direction: column;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  font-size: 20px;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.flow img {
+    margin-left: 100px;
+    width: 45%; /* Adjust the width as needed */
+    /* Other styles for images */
+}
+
+
+.lofi-zoom {
+  margin: auto;
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center;
+  text-align: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.lofi-zoom img {
+  width: 25%;
+  border-radius: 10px;
+  margin: 20px; /* Add margin to separate images */
+}
+
+.Key-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns with equal width */
+    grid-gap: 20px;
+    padding: 0;
+    margin: 0 40px;
+}
+
+.KeyA1, .KeyB1 {
+    margin-bottom: 20px; /* Add space between A1 and A2, and between B1 and B2 */
+}
+
+.KeyA2, .KeyB2 {
+    margin-top: 20px; /* Add space between A1 and A2, and between B1 and B2 */
+}
+
+.KeyA1, .KeyA2, .KeyB1, .KeyB2 {
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+}
+
+.KeyA1 h3, .KeyA2 h3, .KeyB1 h3, .KeyB2 h3 {
+    margin-top: 0; /* Remove default margin */
+}
+
+.KeyA1 p, .KeyA2 p, .KeyB1 p, .KeyB2 p {
+    margin-top: 20px; /* Add gap between h3 and p */
+}
+
+@media (max-width: 768px) {
+    .Key-grid {
+        grid-template-columns: 1fr; /* Change to a single column for smaller screens */
+    }
+}
+
+
+
+.vid-zoom {
+  width: 100%; /* Set the width of the div */
+  height: auto; /* Set the height to auto for responsive resizing */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.vid-zoom video {
+  width: 90%; /* Make the video fill the entire width of its container */
+  height: auto; /* Maintain aspect ratio by setting height to auto */
+}
+
+.AD {
+  background-color: #202020; /* Change to dark grey */
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  text-align: left; /* Center-align text content */
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.AD h3,
+.AD p {
+  padding: 20px 40px; /* Adjusted padding for both h3 and p elements */
+}
+
+.disabilities {
+  width: 80%; /* Adjusted width for responsiveness */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjusted columns to fit content */
+  padding: auto; /* Adjusted padding for grid */
+  margin: auto; /* Centered horizontally */
+  font-size: 1em; /* Font size adjustment */
+  line-height: 1.5;
+}
+
+.dis1, .dis2, .dis3 {
+  margin-top: 0; /* Reset top margin */
+}
+
+.dis-numbers {
+  font-size: 3em; /* Font size adjustment */
+}
+
+.dis-text {
+  font-size: 1em; /* Font size adjustment */
+}
+
+
+.UXC h3, .UXA h3 {
+  margin-left: 70px;
+  margin-top: 100px;
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.UXA img {
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Horizontally center the .UXB div */
+  width: 90%; /* Set the width of the image */
+  display: block; /* Make the image a block element to center it */
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  }
+
+.email{
+  margin: auto;
+  width: auto;
+  display: flex;
+ flex-direction: column;
+  padding: 0px;
+}
+.em-slide {
+  margin: auto;
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center;
+  text-align: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+.em-slide img {
+  width: 40%;
+  margin: 20px; /* Add margin to separate images */
+}
+
+.emailB{
+  margin: auto;
+  display: flex;
+  flex-direction: horizontal;
+/*  align-items: center;*/
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.emailB img{
+  width: 45%;
+  margin: 20px; /* Add margin to separate images */
+}
+
+.scroll{
+  margin:auto;
+  margin-left:40px;
+  
+  opacity: 40%;
+  padding: auto;
+}

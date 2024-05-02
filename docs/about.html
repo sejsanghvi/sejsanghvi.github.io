@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sej Sanghvi Portfolio Website"
+    />
+    <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="back">
+    <canvas></canvas>
+    <div class="back">
+    <div class="menu-bar">
+        <div class="left">
+            <span class="name"><a href="index.html">SEJ SANGHVI</a></span>
+        </div>
+        <div class="right">
+            <a href="about.html">ABOUT</a>
+            <div class="work">
+                <a href="index.html">DESIGN</a>
+                <a href="art.html">ART</a>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <div class="aboutme">
+      <div class="profile">
+        <!-- <img src="Image/Course.png"> -->
+      </div>
+      <div class="bio">
+        <!-- <h3>Sej Sanghvi</h3> -->
+    <p>Hello! I'm Sej Sanghvi, a Visual Designer and Fine Artist based in New York. <br>Currently pursuing an MFA degree at Parsons School of Design, I am deeply passionate about crafting pixel-perfect designs that span brand identities, apps, prototyping, coding, and product management. Whether I'm working with design, code, or a blend of both, I am dedicated to creating user-centric digital solutions <br>that resonate.</p>
+
+    <p>As an Artist and Multimedia Designer, I specialize in transforming messages into impactful visual artifacts. With a focus on Visual Communication Design, I bring a unique skill set to each project. With over two years of versatile professional experience, I have collaborated with design agencies and art studios as a consultant, crafting engaging designs for digital and print platforms.</p>
+
+    <p>I believe in embracing a captivating fusion of innovation and aesthetic brilliance to create designs and art that leave a lasting impression on our senses and touch the depths of our souls.</p>
+</div>
+      </div>
+      <div class="resume">
+      <br><span>RESUME | <a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
+  </div>
+   
+    <script type="importmap">
+      {
+        "imports": {
+          "webgl-fluid-enhanced": "https://esm.run/webgl-fluid-enhanced@latest"
+        }
+      }
+    </script>
+    <script type="module">
+      import webGLFluidEnhanced from 'webgl-fluid-enhanced';
+      const canvas = document.querySelector('canvas');
+      const savedConfig = localStorage.getItem('fluidConfig');
+      const activeConfig = savedConfig ? JSON.parse(savedConfig) : {};
+      webGLFluidEnhanced.simulation(canvas, activeConfig);
+
+      if (savedConfig) updateConfigFromLocalStorage(activeConfig);
+
+      function saveConfigToLocalStorage(config) {
+        localStorage.setItem('fluidConfig', JSON.stringify(config));
+      }
+
+      function updateConfigFromLocalStorage(config) {
+        document.getElementById('sim-resolution').value = config.SIM_RESOLUTION;
+        document.getElementById('dye-resolution').value = config.DYE_RESOLUTION;
+        document.getElementById('capture-resolution').value =
+          config.CAPTURE_RESOLUTION;
+        document.getElementById('density-dissipation').value =
+          config.DENSITY_DISSIPATION;
+        document.getElementById('velocity-dissipation').value =
+          config.VELOCITY_DISSIPATION;
+        document.getElementById('pressure').value = config.PRESSURE;
+        document.getElementById('pressure-iterations').value =
+          config.PRESSURE_ITERATIONS;
+        document.getElementById('curl').value = config.CURL;
+        document.getElementById('initial').value = config.INITIAL;
+        document.getElementById('splat-amount').value = config.SPLAT_AMOUNT;
+        document.getElementById('splat-radius').value = config.SPLAT_RADIUS;
+        document.getElementById('splat-force').value = config.SPLAT_FORCE;
+        document.getElementById('splat-key').value =
+          "'" + config.SPLAT_KEY + "'";
+        document.getElementById('shading').value = config.SHADING;
+        document.getElementById('colorful').value = config.COLORFUL;
+        document.getElementById('color-update-speed').value =
+          config.COLOR_UPDATE_SPEED;
+        document.getElementById('color-palette').value = JSON.stringify(
+          config.COLOR_PALETTE,
+        );
+        document.getElementById('hover').value = config.HOVER;
+        document.getElementById('back-color').value =
+          "'" + config.BACK_COLOR + "'";
+        document.getElementById('transparent').value = config.TRANSPARENT;
+        document.getElementById('brightness').value = config.BRIGHTNESS;
+        document.getElementById('bloom').value = config.BLOOM;
+        document.getElementById('bloom-iterations').value =
+          config.BLOOM_ITERATIONS;
+        document.getElementById('bloom-resolution').value =
+          config.BLOOM_RESOLUTION;
+        document.getElementById('bloom-intensity').value =
+          config.BLOOM_INTENSITY;
+        document.getElementById('bloom-threshold').value =
+          config.BLOOM_THRESHOLD;
+        document.getElementById('bloom-soft-knee').value =
+          config.BLOOM_SOFT_KNEE;
+        document.getElementById('sunrays').value = config.SUNRAYS;
+        document.getElementById('sunrays-resolution').value =
+          config.SUNRAYS_RESOLUTION;
+        document.getElementById('sunrays-weight').value = config.SUNRAYS_WEIGHT;
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (e.code === 'KeyP') webGLFluidEnhanced.pause(true);
+      });
+    </script>
+  </body>
+</html>
