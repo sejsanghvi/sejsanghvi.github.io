@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica;
+font-family: Helvetica;
 margin: 0;
 padding: 0;
 overflow: hidden; /* Hide body overflow */
@@ -73,7 +73,7 @@ background-color: transparent;
   
   .below-bar {
   background-color: transparent; /* Set below bar background to transparent */
-  height: 300px;
+  height: 70%px;
 }
 
   
@@ -82,14 +82,13 @@ background-color: transparent;
       display: flex;
       justify-content: space-between;
       padding: 10px 20px;
-      margin-top:-180px;
-      margin-bottom:35px ;
+      
        /* Set background color of menu bar */
   }
-  hr {
+hr {
       border: none;
       border-top: none;
-       margin-top: 30%; /* Adjust as needed */
+       margin-top: 40%; /* Adjust as needed */
     margin-bottom: 5%; /* Adjust as needed */
   }
 
