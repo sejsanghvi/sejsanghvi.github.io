@@ -89,8 +89,8 @@ background-color: transparent;
   hr {
       border: none;
       border-top: none;
-      margin-top: 300px;
-      margin-bottom: 200px;
+       margin-top: 30%; /* Adjust as needed */
+    margin-bottom: 5%; /* Adjust as needed */
   }
 
 
