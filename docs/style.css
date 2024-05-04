@@ -25,8 +25,7 @@ canvas {
   z-index: 0;
 }
 
-.menu-bar,
-.below-bar, .grid-containerA, .grid-containerB, .grid-containerC,.bottom, .bio, .resume {
+.menu-bar, .below-bar, .grid-containerA, .grid-containerB, .grid-containerC,.bottom, .bio, .resume {
 width: 100%;
 display: flex;
 justify-content: space-between;
@@ -37,7 +36,7 @@ background-color: transparent;
 
 }
 
-.menu-bar {
+.menu-bar{
       width: 100%;
       font-size: 13px;
       display: flex;
@@ -78,7 +77,7 @@ background-color: transparent;
 
   
   .below-bar {
-    width: 100%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       padding: 10px 20px;
@@ -88,18 +87,20 @@ background-color: transparent;
 hr {
       border: none;
       border-top: none;
-       margin-top: 40%; /* Adjust as needed */
-    margin-bottom: 5%; /* Adjust as needed */
+      margin-top: 45%; /* Adjust as needed */
+      margin-bottom: 0%; /* Adjust as needed */
   }
 
 
   .below-bar .left {
+    font-size: 13px;
     margin-top: 0px;
       flex-grow: 1;
       width: 100%;
       display: flex;
       justify-content: space-between;
       margin-left: 40px;
+      opacity: 30%;
 
 
   }
