@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -10,11 +11,7 @@
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-     <!-- Preload images -->
-    <link rel="preload" href="Image/Playbook.png" as="image">
     
-    <!-- Preload video -->
-    <link rel="preload" href="Image/LP.mp4" as="video">
   </head>
   <body>
     <div class="back">
@@ -39,15 +36,25 @@
           <p>Crafted an impactful eBook, the Launch Playbook for EXACT Sciences, utilizing the content provided by the team. Employed layout design expertise to transform the content into a visually engaging and informative resource. Integrated data visualization techniques to enhance the presentation of key information. The Launch Playbook serves as a comprehensive guide for a successful product launch, offering insights on strategy development, creative execution, and impact optimization.</p> 
       </div>
       <div class="vid-zoom">
-  <video src="Image/LP.mp4" controls playsinline>
-    Your browser does not support the video tag.
+      <video
+    id="my-video"
+    class="video-js vjs-fill vjs-16-9 vjs-fluid"
+    responsive="true"
+    controls
+    preload="auto"
+  
+    data-setup="{}"
+  >
+    <source src="Image/LP.mp4" type="video/mp4" />
+    
   </video>
-</div>
+
+ </div>
  </div>
 
   <div class="bottom">
     <span>I'm Sej Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
-   
+   <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 </body>
 </html>

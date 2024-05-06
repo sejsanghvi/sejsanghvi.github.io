@@ -512,17 +512,17 @@ Poster-3{
 
 
 .vid-zoom {
-  width: 100%; /* Set the width of the div */
+  
+  margin: auto;
+  padding: auto;
+  width: 100vw; /* Set the width of the div */
   height: auto; /* Set the height to auto for responsive resizing */
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
 }
 
-.vid-zoom video {
-  width: 90%; /* Make the video fill the entire width of its container */
-  height: auto; /* Maintain aspect ratio by setting height to auto */
-}
+
 
 .AD {
   background-color: #202020; /* Change to dark grey */

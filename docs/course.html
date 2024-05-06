@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -10,16 +11,7 @@
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-    <!-- Preload images -->
-    <link rel="preload" href="Image/Course.png" as="image">
-    <link rel="preload" href="Image/research.png" as="image">
-    <link rel="preload" href="Image/research 2.png" as="image">
-    <link rel="preload" href="Image/Affinity map.png" as="image">
-    <link rel="preload" href="Image/Frame.png" as="image">
-    <link rel="preload" href="Image/lofi.png" as="image">
-    <link rel="preload" href="Image/Midfi.png" as="image">
-    <link rel="preload" href="Image/Style Guidelines.png" as="image">
-    <link rel="preload" href="Image/Course History Video.mp4" as="video">
+   
   </head>
   <body>
     <div class="back">
@@ -201,10 +193,20 @@
     <div class="UXA">
       <h3> Onboarding</h3>
       <div class="vid-zoom">
-  <video src="Image/Course History Video.mp4" controls playsinline>
-    Your browser does not support the video tag.
+      <video
+    id="my-video"
+    class="video-js vjs-fill vjs-16-9 vjs-fluid"
+    responsive="true"
+    controls
+    preload="auto"
+  
+    data-setup="{}"
+  >
+    <source src="Image/Course History Video.mp4" type="video/mp4" />
+    
   </video>
-    </div>
+
+ </div>
 </div>
 </div>
   <div class="bottom">
@@ -212,6 +214,6 @@
       apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to 
       creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
-
+ <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 </body>
 </html>
