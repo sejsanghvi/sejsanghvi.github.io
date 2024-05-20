@@ -625,3 +625,17 @@ Poster-3{
   opacity: 40%;
   padding: auto;
 }
+
+.website {
+            margin: auto;
+            text-align: center;
+        }
+
+        .website a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .website a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
