@@ -13,7 +13,7 @@
     
     <!-- Preload images and GIFs -->
     <link rel="preload" href="docs/Image/Zoom.gif" as="image">
-    <link rel="preload" href="docs/Image/Course.jpg" as="image">
+    <link rel="preload" href="docs/Image/Course.gif" as="image">
     <link rel="preload" href="docs/Image/UIUX.gif" as="image">
     <link rel="preload" href="docs/Image/Playbook.png" as="image">
     <link rel="preload" href="docs/Image/Email_.gif" as="image">
@@ -22,7 +22,9 @@
     <link rel="preload" href="docs/Image/Kamakshi.png" as="image">
     <link rel="preload" href="docs/Image/Move your mental health.gif" as="image">
   </head>
-  <body>
+  <body class="is-preload">
+    <!-- Preloader -->
+      <div id="preloader"></div>
     <canvas></canvas>
     <div class="back">
     <div class="menu-bar">
@@ -52,7 +54,7 @@
 <br>
     <div class="grid-containerA">
       <div class="grid-item1">
-        <a href="docs/course.html"><img src="docs/Image/Course.jpg">
+        <a href="docs/course.html"><img src="docs/Image/Course.gif">
           <p>Course History Platform at The New School | UI UX Design</p> </a>
       </div>
       <div class="grid-item2">
@@ -191,5 +193,14 @@
         if (e.code === 'KeyP') webGLFluidEnhanced.pause(true);
       });
     </script>
+    <script>
+        var loader = document. getElementById ("preloader");
+    
+        window.addEventListener('load', function() {
+          document.getElementById('preloader').classList.add('loaded');
+        });
+      
+      </script>
+
   </body>
 </html>
