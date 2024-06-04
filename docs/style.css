@@ -131,6 +131,9 @@ background-color: transparent;
   font-size: 12px;
   color: white;
 }
+.grid-item a {
+  text-decoration: none;
+}
 
 .bottom span {
   margin-top: 0px;
@@ -560,7 +563,7 @@ Poster-3{
         .website a:hover {
             text-decoration: underline; /* Add underline on hover */
         }
-.logo-1 img, .Book-1 img{
+.logo-1 img, .Book-1 img, .cover img{
   width: 100%;
   height: auto;
 }
