@@ -15,7 +15,10 @@ position: relative;
 body {
 overflow-y: scroll; /* Always show vertical scrollbar */
 }
-
+hr {
+      border: none;
+      border-top: none;
+  }
 canvas {
   position: fixed; /* Position the canvas to cover the entire viewport */
   top: 0;
@@ -25,7 +28,7 @@ canvas {
   z-index: 0;
 }
 
-.menu-bar, .below-bar, .grid-containerA, .grid-containerB, .grid-containerC,.bottom, .bio, .resume {
+.menu-bar, .below-bar, .grid-container,.bottom, .bio, .resume {
 width: 100%;
 display: flex;
 justify-content: space-between;
@@ -70,145 +73,63 @@ background-color: transparent;
       flex-direction: column;
   }
   
-  .below-bar {
-  background-color: transparent; /* Set below bar background to transparent */
-  height: 70%px;
-}
-
-  
-  .below-bar {
-      width: 100%;
+ .below-bar {
+    
+    width: 100%;
       display: flex;
       justify-content: space-between;
       padding: 10px 20px;
+      margin-top:0px ;
       
-       /* Set background color of menu bar */
   }
-hr {
-      border: none;
-      border-top: none;
-      margin-top: 45%; /* Adjust as needed */
-      margin-bottom: 0%; /* Adjust as needed */
-  }
+  
 
-
-  .below-bar .left {
-    font-size: 13px;
-    margin-top: 0px;
+.below-bar .left .name {
+  font-size: 14px;
+    color: white;
       flex-grow: 1;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin-left: 40px;
-      opacity: 30%;
-
-
-  }
-  .below-bar .right {
-    display: flex;
-      text-align: right;
-      margin-top: -10px;
-      margin-left: 40%;
-    font-style: italic;
-  }
-
-  .below-bar span {
-      color: white; /* Set span text color to white */
-      text-decoration: none;
-      margin-right: 40px;
+      margin-left: 240px;
 
   }
 
-  img {
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height:auto;
+.grid-container {
+  width:auto;
+  justify-content: space-between;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 50px; /* Reduced gap between grid items */
+  padding:50px;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 300px;
+  margin-top: 100px;
+  
 }
 
-  .grid-containerA{
-    width:auto;
-    justify-content: space-between;
-    justify-items: center;
-    display: grid;
-    grid-template-columns:repeat(2, 1fr); 
-    grid-template-rows:repeat(1, 1fr);
-    grid-gap: 20px; /* Gap between grid items */
-    padding: none;
-    margin:0 ;
-}
-
- .grid-item1{
-  grid-row-start:1 ;
-  grid-row-end:2 ;
-  grid-column-start:1 ;
-  grid-column-end:2;
- }
-
- .grid-item2{
-  grid-row-start:1 ;
-  grid-row-end:2 ;
-  grid-column-start:2 ;
-  grid-column-end:3 ;
- }
-
-.grid-containerB{
-    width:auto;
-    justify-content: space-between;
-    justify-items: center;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr); 
-    grid-template-rows:repeat(1, 1fr);
-    grid-gap: 20px; /* Gap between grid items */
-    padding: none;
-    margin:0 ;
-}
-.grid-item3{
-  grid-row-start:1 ;
-  grid-row-end:2 ;
-  grid-column-start:1 ;
-  grid-column-end:2;
-}
-
-.grid-item4{
-  grid-row-start:1 ;
-  grid-row-end:2 ;
-  grid-column-start:2 ;
-  grid-column-end:3;
-}
-
-.grid-item5{
-  grid-row-start:1 ;
-  grid-row-end:2 ;
-  grid-column-start:3 ;
-  grid-column-end:4;
-}
-
-.grid-containerC {
-  width: 100%;
-  margin: 0; /* Center horizontally */
-  margin-left:21% ;
-  margin-right:21%;
+/* Style for each grid item (image) */
+.grid-item {
   display: flex;
-  justify-content: center; /* Align items horizontally in the center */
-  align-items: center; /* Align items vertically in the center */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.grid-containerC img {
-  margin: auto;
-  width: 58%; /* Adjust the width as needed */
+.grid-item img {
+  width: 90%; /* Reduced image size */
+  height: auto;
 }
 
 
-.grid-containerA p, .grid-containerB p, .grid-containerC p {
-    font-size: 13px;
-    line-height: 1.5;
-    color:white;
+/* Style for the paragraph within grid items */
+.grid-item p {
+  margin: 10px;
+  font-size: 12px;
+  color: white;
 }
-.grid-containerA a, .grid-containerB a, .grid-containerC a{
-  text-decoration: none;
-}
-
 
 .bottom span {
   margin-top: 0px;
@@ -262,7 +183,7 @@ hr {
 }
 
 .bio p {
-  font-size: 18px; /* Adjust font size for paragraphs */
+  font-size: 16px; /* Adjust font size for paragraphs */
   line-height: 1.5; /* Increase line height for better readability */
 }
 
@@ -639,7 +560,10 @@ Poster-3{
         .website a:hover {
             text-decoration: underline; /* Add underline on hover */
         }
-
+.logo-1 img, .Book-1 img{
+  width: 100%;
+  height: auto;
+}
 
         /* Preloader */
   #preloader{
