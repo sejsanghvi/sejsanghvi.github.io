@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="artstyle.css">
   </head>
   <body>
+
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
     <div>
     <div class="overlay"></div>
     <div class="menu-bar">
@@ -47,5 +52,12 @@
 </div>
  </div>
 </div>
+<script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
   </body>
 </html>

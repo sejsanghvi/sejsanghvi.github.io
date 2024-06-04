@@ -10,23 +10,15 @@
     />
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
-    <link rel="stylesheet" href="style.css">
-     <!-- Preload Images -->
-    <link rel="preload" href="Image/Course.png" as="image">
-    <link rel="preload" href="Image/research.png" as="image">
-    <link rel="preload" href="Image/research 2.png" as="image">
-    <link rel="preload" href="Image/Affinity map.png" as="image">
-    <link rel="preload" href="Image/Frame.png" as="image">
-    <link rel="preload" href="Image/Lofi.png" as="image">
-    <link rel="preload" href="Image/Midfi.png" as="image">
-    <link rel="preload" href="Image/Style Guidelines.png" as="image">
+   <link rel="stylesheet" href="style.css">
     
-    <!-- Preload Video -->
-    <link rel="preload" href="Image/Course History Video.mp4" as="video">
    
   </head>
   <body>
-    
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
     <div class="back">
     <div class="menu-bar">
         <div class="left">
@@ -224,5 +216,12 @@
       creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+ <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
 </body>
 </html>

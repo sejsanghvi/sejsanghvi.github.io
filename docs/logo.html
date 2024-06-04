@@ -10,19 +10,13 @@
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-
-    <!-- Preload Images -->
-    <link rel="preload" href="Image/Kamakshi.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy2.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy3.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy4.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy5.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy6.png" as="image">
-    <link rel="preload" href="Image/KAMAKSHI copy7.png" as="image">
     
   </head>
   <body>
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    
     <div class="back">
     <canvas></canvas>
     <div class="back">
@@ -55,6 +49,12 @@
     <span>I'm Sej Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
     </div>
+<script>
+      var loader = document.getElementById("preloader");
 
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
 </body>
 </html>

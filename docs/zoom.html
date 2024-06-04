@@ -11,21 +11,13 @@
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-     <!-- Preload Images -->
-    <link rel="preload" href="Image/Zoom.png" as="image">
-    <link rel="preload" href="Image/Frame 3.png" as="image">
-    <link rel="preload" href="Image/Information Architecture Template-3.png" as="image">
-    <link rel="preload" href="Image/Desktop - 2.png" as="image">
-    <link rel="preload" href="Image/Desktop - 3.png" as="image">
-    <link rel="preload" href="Image/Desktop - 4.png" as="image">
-    <link rel="preload" href="Image/Desktop - 5.png" as="image">
-    <link rel="preload" href="Image/Desktop - 6.png" as="image">
-    
-    <!-- Preload Video -->
-    <link rel="preload" href="Image/Mockup.mp4" as="video">
     
   </head>
   <body>
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
     <div class="back">
     <canvas></canvas>
     <div class="back">
@@ -132,5 +124,12 @@
     <span>I'm Sej Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+   <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
 </body>
 </html>

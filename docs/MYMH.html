@@ -12,16 +12,15 @@
     
     <link rel="stylesheet" href="style.css">
 
-     <!-- Preload GIF -->
-    <link rel="preload" href="Image/Move your mental health.gif" as="image">
-    
-    <!-- Preload Video -->
-    <link rel="preload" href="Image/Move your mental health.mp4" as="video">
-    
+   
 
   </head>
   <body>
     
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
     <canvas></canvas>
     <div class="back">
     <div class="menu-bar">
@@ -73,5 +72,12 @@
    
 </div>
  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+ <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
 </body>
 </html>

@@ -10,14 +10,14 @@
     <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-     <!-- Preload Images -->
-    <link rel="preload" href="Image/Poster.png" as="image">
-    <link rel="preload" href="Image/POSTER2.jpg" as="image">
-    <link rel="preload" href="Image/POSTER1.jpg" as="image">
-    <link rel="preload" href="Image/POSTER3.jpg" as="image">
+    
     
   </head>
   <body>
+    <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
     <div class="back">
     <canvas></canvas>
     <div class="back">
@@ -60,5 +60,12 @@
    
    
 </div>
+<script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener('load', function() {
+        document.getElementById('preloader').classList.add('loaded');
+      });
+    </script>
 </body>
 </html>

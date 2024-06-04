@@ -15,6 +15,7 @@ position: relative;
 body {
 overflow-y: scroll; /* Always show vertical scrollbar */
 }
+
 hr {
       border: none;
       border-top: none;
@@ -520,6 +521,7 @@ Poster-3{
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks */
 }
+
 .em-slide img {
   width: 40%;
   margin: 20px; /* Add margin to separate images */
@@ -529,7 +531,6 @@ Poster-3{
   margin: auto;
   display: flex;
   flex-direction: horizontal;
-/*  align-items: center;*/
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks */
 }
@@ -542,7 +543,6 @@ Poster-3{
 .scroll{
   margin:auto;
   margin-left:40px;
-  
   opacity: 40%;
   padding: auto;
 }
