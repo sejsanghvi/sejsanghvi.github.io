@@ -1,59 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sej Sanghvi Portfolio Website"
-    />
-    <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
-    
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <canvas></canvas>
-    <div class="back">
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sej Sanghvi Portfolio Website" />
+  <title>Sej Sanghvi- Visual Designer & Fine Artist</title>
+  
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for WebGL content -->
+  <canvas></canvas>
+
+  <!-- Back section containing menu, bio, and resume -->
+  <div class="back">
+    <!-- Menu Bar -->
     <div class="menu-bar">
-        <div class="left">
-            <span class="name"><a href="../index.html">SEJ SANGHVI</a></span>
+      <div class="left">
+        <!-- Logo or name link -->
+        <span class="name"><a href="../index.html">SEJ SANGHVI</a></span>
+      </div>
+      <div class="right">
+        <!-- Links to other pages -->
+        <a href="about.html">ABOUT</a>
+        <div class="work">
+          <a href="design.html">DESIGN</a>
+          <a href="art.html">ART</a>
         </div>
-        <div class="right">
-            <a href="about.html">ABOUT</a>
-            <div class="work">
-                <a href="design.html">DESIGN</a>
-                <a href="art.html">ART</a>
-            </div>
-        </div>
+      </div>
     </div>
 
-  
-
     <div class="aboutme">
-      <div class="profile">
-       
-      </div>
       <div class="bio">
        
-    <p>Hello! I'm Sej Sanghvi, a Visual Designer and Fine Artist based in New York. <br>Currently pursuing an MFA degree at Parsons School of Design, I am deeply passionate about crafting pixel-perfect designs that span brand identities, apps, prototyping, coding, and product management. Whether I'm working with design, code, or a blend of both, I am dedicated to creating user-centric digital solutions <br>that resonate.</p>
+       <p>Hello! I'm Sej Sanghvi, a Visual Designer and Fine Artist based in New York. Currently pursuing an MFA degree at Parsons School of Design, I am deeply passionate about crafting pixel-perfect designs that span brand identities, apps, prototyping, coding, and product management. Whether I'm working with design, code, or a blend of both, I am dedicated to creating user-centric digital solutions that resonate.
+        <br><br>
 
-    <p>As an Artist and Multimedia Designer, I specialize in transforming messages into impactful visual artifacts. With a focus on Visual Communication Design, I bring a unique skill set to each project. With over two years of versatile professional experience, I have collaborated with design agencies and art studios as a consultant, crafting engaging designs for digital and print platforms.</p>
+       As an Artist and Multimedia Designer, I specialize in transforming messages into impactful visual artifacts. With a focus on Visual Communication Design, I bring a unique skill set to each project. With over two years of versatile professional experience, I have collaborated with design agencies and art studios as a consultant, crafting engaging designs for digital and print platforms.
+       <br><br>
 
-    <p>I believe in embracing a captivating fusion of innovation and aesthetic brilliance to create designs and art that leave a lasting impression on our senses and touch the depths of our souls.</p>
-</div>
+       I believe in embracing a captivating fusion of innovation and aesthetic brilliance to create designs and art that leave a lasting impression on our senses and touch the depths of our souls.</p>
       </div>
-      <div class="resume">
-      <br><span><a href="Image/Sej Sanghvi_Resume.pdf" target="_blank">RESUME </a>| <a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
+      <!-- Resume and Links Section -->
+    <div class="resume">
+      <span><a href="Image/Sej Sanghvi_Resume.pdf" target="_blank">RESUME </a>| <a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
+    </div>
+    </div>
+
   </div>
-   </div>
-    <script type="importmap">
+
+  <!-- Importmap for WebAssembly Module -->
+  <script type="importmap">
       {
         "imports": {
           "webgl-fluid-enhanced": "https://esm.run/webgl-fluid-enhanced@latest"
         }
       }
-    </script>
-    <script type="module">
+  </script>
+  <script type="module">
       import webGLFluidEnhanced from 'webgl-fluid-enhanced';
       const canvas = document.querySelector('canvas');
       const savedConfig = localStorage.getItem('fluidConfig');
@@ -117,6 +123,6 @@
       window.addEventListener('keydown', (e) => {
         if (e.code === 'KeyP') webGLFluidEnhanced.pause(true);
       });
-    </script>
+  </script>
   </body>
 </html>

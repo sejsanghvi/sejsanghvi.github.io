@@ -17,44 +17,44 @@
   </head>
   <body>
     <div>
-    <div class="overlay"></div>
-    <div class="menu-bar">
+      <div class="overlay"></div>
+      <div class="menu-bar">
         <div class="left">
-            <span class="name"><a href="art.html">SEJ SANGHVI</a></span>
+          <span class="name"><a href="../index.html">SEJ SANGHVI</a></span>
         </div>
         <div class="right">
-            <a href="artabout.html">ABOUT</a>
-            <div class="work">
-                <a href="design.html">DESIGN</a>
-                <a href="art.html">ART</a>
-            </div>
-        </div>
-    </div>
-    <div class="below-bar">
-        <div class="left">
-            <span class="name"><i>Pause,<br> 
-            Take a pause<br> 
-            to breathe<br>
-             <br>
-            Feel, <br>                    
-            Feel<br> 
-            your body  <br>
-            <br>
-            Rest,<br>                        
-            Let <br>
-            your soul<br>
-            catch up <br>
-            </i>
-
-</span>
+          <a href="artabout.html">ABOUT</a>
+            <a href="design.html">DESIGN</a>
+            <a href="art.html">ART</a>
+          </div>
         </div>
       </div>
-    <div class="click">
-      <span ><i> < click anywhere > </i></span>
-    </div> 
+      <div class="below-bar">
+        <div class="left">
+          <span class="name">
+            <i>
+              Pause,<br> 
+              Take a pause<br> 
+              to breathe<br>
+              <br>
+              Feel, <br>                    
+              Feel<br> 
+              your body  <br>
+              <br>
+              Rest,<br>                        
+              Let <br>
+              your soul<br>
+              catch up <br>
+            </i>
+          </span>
+        </div>
+      </div>
+      <div class="click">
+        <span ><i> < click anywhere > </i></span>
+      </div> 
     </div>
     <script>
-   let clickCount = 0;
+     let clickCount = 0;
 let firstImageElement = null;
 let secondImageElement = null;
 let thirdImageElement = null;
@@ -82,45 +82,90 @@ document.addEventListener('click', function(event) {
     thirdImageElement = null;
   }
 
-  if (clickCount === 0 || clickCount === 3) {
-    // Show Image 1 on the right side
-    const imageUrl1 = 'ArtImages/Sanghvi_Sej 03.png';
-    firstImageElement = document.createElement('a');
-    firstImageElement.href = 'shade.html'; // Set the URL of the first page
-    const image1 = document.createElement('img');
-    image1.src = imageUrl1;
-    image1.style.width = '500px';
-    firstImageElement.appendChild(image1);
-    firstImageElement.style.position = 'fixed';
-    firstImageElement.style.top = '150px';
-    firstImageElement.style.right = '150px';
-    document.body.appendChild(firstImageElement);
-  } else if (clickCount === 1) {
-    // Show Image 2 on the left side
-    const imageUrl2 = 'ArtImages/DSCF0720.JPG';
-    secondImageElement = document.createElement('a');
-    secondImageElement.href = 'meditate.html'; // Set the URL of the second page
-    const image2 = document.createElement('img');
-    image2.src = imageUrl2;
-    image2.style.width = '700px';
-    secondImageElement.appendChild(image2);
-    secondImageElement.style.position = 'fixed';
-    secondImageElement.style.top = '250px';
-    secondImageElement.style.left = '200px';
-    document.body.appendChild(secondImageElement);
-  } else if (clickCount === 2) {
-    // Show Image 3
-    const imageUrl3 = 'ArtImages/DSCF0692.JPG';
-    thirdImageElement = document.createElement('a');
-    thirdImageElement.href = 'thread.html'; // Set the URL of the third page
-    const image3 = document.createElement('img');
-    image3.src = imageUrl3;
-    image3.style.width = '300px';
-    thirdImageElement.appendChild(image3);
-    thirdImageElement.style.position = 'fixed';
-    thirdImageElement.style.top = '50px';
-    thirdImageElement.style.left = '200px';
-    document.body.appendChild(thirdImageElement);
+  if (window.innerWidth >= 768) {
+    // For tablet and larger screens
+    if (clickCount === 0 || clickCount === 3) {
+      // Show Image 1 on the right side
+      const imageUrl1 = 'ArtImages/Sanghvi_Sej 03.png';
+      firstImageElement = document.createElement('a');
+      firstImageElement.href = 'shade.html'; // Set the URL of the first page
+      const image1 = document.createElement('img');
+      image1.src = imageUrl1;
+      image1.style.width = '500px';
+      firstImageElement.appendChild(image1);
+      firstImageElement.style.position = 'fixed';
+      firstImageElement.style.top = '150px';
+      firstImageElement.style.right = '150px';
+      document.body.appendChild(firstImageElement);
+    } else if (clickCount === 1) {
+      // Show Image 2 on the left side
+      const imageUrl2 = 'ArtImages/DSCF0720.JPG';
+      secondImageElement = document.createElement('a');
+      secondImageElement.href = 'meditate.html'; // Set the URL of the second page
+      const image2 = document.createElement('img');
+      image2.src = imageUrl2;
+      image2.style.width = '700px';
+      secondImageElement.appendChild(image2);
+      secondImageElement.style.position = 'fixed';
+      secondImageElement.style.top = '250px';
+      secondImageElement.style.left = '200px';
+      document.body.appendChild(secondImageElement);
+    } else if (clickCount === 2) {
+      // Show Image 3
+      const imageUrl3 = 'ArtImages/DSCF0692.JPG';
+      thirdImageElement = document.createElement('a');
+      thirdImageElement.href = 'thread.html'; // Set the URL of the third page
+      const image3 = document.createElement('img');
+      image3.src = imageUrl3;
+      image3.style.width = '300px';
+      thirdImageElement.appendChild(image3);
+      thirdImageElement.style.position = 'fixed';
+      thirdImageElement.style.top = '50px';
+      thirdImageElement.style.left = '200px';
+      document.body.appendChild(thirdImageElement);
+    }
+  } else {
+    // For mobile screens
+    if (clickCount === 0) {
+      // Show Image 1
+      const imageUrl1 = 'ArtImages/Sanghvi_Sej 03.png';
+      firstImageElement = document.createElement('a');
+      firstImageElement.href = 'shade.html'; // Set the URL of the first page
+      const image1 = document.createElement('img');
+      image1.src = imageUrl1;
+      image1.style.width = '300px';
+      firstImageElement.appendChild(image1);
+      firstImageElement.style.position = 'fixed';
+      firstImageElement.style.top = '50px';
+      firstImageElement.style.left = '50px';
+      document.body.appendChild(firstImageElement);
+    } else if (clickCount === 1) {
+      // Show Image 2
+      const imageUrl2 = 'ArtImages/DSCF0720.JPG';
+      secondImageElement = document.createElement('a');
+      secondImageElement.href = 'meditate.html'; // Set the URL of the second page
+      const image2 = document.createElement('img');
+      image2.src = imageUrl2;
+      image2.style.width = '300px';
+      secondImageElement.appendChild(image2);
+      secondImageElement.style.position = 'fixed';
+      secondImageElement.style.top = '150px';
+      secondImageElement.style.left = '50px';
+      document.body.appendChild(secondImageElement);
+    } else if (clickCount === 2) {
+      // Show Image 3
+      const imageUrl3 = 'ArtImages/DSCF0692.JPG';
+      thirdImageElement = document.createElement('a');
+      thirdImageElement.href = 'thread.html'; // Set the URL of the third page
+      const image3 = document.createElement('img');
+      image3.src = imageUrl3;
+      image3.style.width = '300px';
+      thirdImageElement.appendChild(image3);
+      thirdImageElement.style.position = 'fixed';
+      thirdImageElement.style.top = '250px';
+      thirdImageElement.style.left = '50px';
+      document.body.appendChild(thirdImageElement);
+    }
   }
 
   // Increment click count and reset if it reaches 4 (to cycle through images)
@@ -130,7 +175,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-
-</script>
+    </script>
   </body>
 </html>

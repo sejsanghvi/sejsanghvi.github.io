@@ -49,19 +49,18 @@
 
 
 <div class="UXA">
- <h3>Lo-Fi Prototype</h3>
-</div>
-<div class="scroll">
-      <span ><i> < scroll > </i></span>
+    <h3>Lo-Fi Prototype</h3>
+  </div>
+  
+  <div class="lofi-zoom">
+    <div class="lofi-zoom-content">
+      <img src="Image/Desktop - 2.png" alt="Prototype Image 1">
+      <img src="Image/Desktop - 3.png" alt="Prototype Image 2">
+      <img src="Image/Desktop - 4.png" alt="Prototype Image 3">
+      <img src="Image/Desktop - 5.png" alt="Prototype Image 4">
+      <img src="Image/Desktop - 6.png" alt="Prototype Image 5">
     </div>
-<div class="lofi-zoom">
-   
-        <img src="Image/Desktop - 2.png">
-        <img src="Image/Desktop - 3.png">
-        <img src="Image/Desktop - 4.png">
-        <img src="Image/Desktop - 5.png">
-        <img src="Image/Desktop - 6.png">
-</div>
+  </div>
 <div>
   <div class="UXA">
     <h3>Key Features</h3>
@@ -131,5 +130,16 @@
         document.getElementById('preloader').classList.add('loaded');
       });
     </script>
+    <script > document.addEventListener('DOMContentLoaded', function() {
+  const lofiZoomContent = document.querySelector('.lofi-zoom-content');
+  const lofiImages = Array.from(lofiZoomContent.children);
+
+  // Duplicate images for seamless scroll
+  lofiImages.forEach(image => {
+    const clone = image.cloneNode(true);
+    lofiZoomContent.appendChild(clone);
+  });
+});
+</script>
 </body>
 </html>
