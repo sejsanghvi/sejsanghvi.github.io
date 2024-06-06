@@ -102,6 +102,11 @@ background-color: transparent;
     margin-left: 20px;
   }
 
+  .menu-bar .right {
+  display: flex;
+  margin-right: 20px;
+}
+
   .menu-bar a {
     padding-right: 30px;
   }
@@ -117,6 +122,11 @@ background-color: transparent;
   .menu-bar .left {
     margin-left: 10px;
   }
+
+  .menu-bar .right {
+  display: flex;
+  margin-right: 10px;
+}
 
   .menu-bar a {
     padding-right: 10px;
@@ -262,6 +272,12 @@ background-color: transparent;
 
 /* Media queries for tablets and mobile devices */
 @media only screen and (max-width: 768px) {
+
+  .aboutme {
+  grid-gap: 20px; /* Gap between grid items */
+  padding: 30px; /* Adjust padding as needed */
+  margin: 30px;
+}
   .bio, .resume {
     width: 100%; /* Adjust width to full screen on tablets and mobile */
     padding: 0 20px; /* Add horizontal padding for better readability */
