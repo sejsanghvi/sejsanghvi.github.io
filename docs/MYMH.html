@@ -19,7 +19,7 @@
     
     <body class="is-preload">
     <!-- Preloader -->
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
 
     <canvas></canvas>
     <div class="back">
@@ -36,13 +36,55 @@
     <div class="book">
       <div class="cover">
         <img src="Image/Move your mental health.gif">
-          <p>Embark on a captivating journey through "Move Your Mental Health," a data story animation that unveils the remarkable impact of exercise, physical activities, and body movements on our well-being. Guided by the Freytag Pyramid and engaging with fun illustrations, this empowering tale motivates you to take that first step towards becoming the best version of yourself through the transformative power of exercise.
-            <br>
-            <i>(Screened at the Parsons Film Festival 2024)</i>
+          <h4>Embark on a captivating journey through "Move Your Mental Health," a data story animation that unveils the remarkable impact of exercise, physical activities, and body movements on our well-being. Guided by the Freytag Pyramid and engaging with fun illustrations, this empowering tale motivates you to take that first step towards becoming the best version of yourself through the transformative power of exercise.</h4>
+            
+            <p><i>(Screened at the Parsons Film Festival 2024)<br>
+            As a kickboxing instructor, I passionately promote fitness as a remedy for mental health challenges. By encouraging physical activity, the aim is to enhance individuals' mental well-being and support them in leading healthier, happier lives.</i>
           </p> 
     
       </div>
-   
+   <div class="Book-1">
+     <img src="Image/sketch.png">
+   </div>
+  
+   <div class="UXA">
+    <h3>Storyboarding</h3>
+
+  </div>
+  <div class="gallery-wrapper">
+        <div class="flipbook">
+            <div class="page">
+            </div>
+            <div class="page">
+                <img src="Image/4.png" alt="Image 2" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/5.png" alt="Image 3" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/7.png" alt="Image 4" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/8.png" alt="Image 5" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/9.png" alt="Image 6" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/6.png" alt="Image 7" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/11.png" alt="Image 8" class="gallery-image">
+            </div>
+            <div class="page">
+                <img src="Image/12.png" alt="Image 9" class="gallery-image">
+            </div>
+        </div>
+    </div>
+  
+    <br>
+   <br>
+   <br>
    <div class="vid-zoom">
       <video
     id="my-video"
@@ -72,7 +114,29 @@
    
 </div>
  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
- <script>
+ 
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pages = document.querySelectorAll('.page');
+            const flipbook = document.querySelector('.flipbook');
+            let currentPage = 0;
+            const totalPages = pages.length;
+
+            function flipPage() {
+                if (currentPage < totalPages) {
+                    pages[currentPage].classList.add('flipped');
+                    currentPage++;
+                } else {
+                    pages.forEach(page => page.classList.remove('flipped'));
+                    currentPage = 0;
+                }
+            }
+
+            setInterval(flipPage, 1500); // Flip page every 1.5 seconds
+        });
+    </script>
+    <script>
       var loader = document.getElementById("preloader");
 
       window.addEventListener('load', function() {

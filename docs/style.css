@@ -275,14 +275,37 @@ background-color: transparent;
   color:white;
   margin-top: 50px;
   margin-bottom: 100px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5
 }
+
+.cover h4{
+  width: 50%;
+  margin-left: 45%;
+  text-align: left;
+  color:white;
+  margin-top: 50px;
+  font-size: 25px;
+  line-height: 1.5
+}
+
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+  .cover p,
+  .cover h4 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 50px; /* Adjust as needed */
+  }
+}
+
 .book{
   margin-top: 100px;
   margin-bottom: 300px;
   line-height: 1.5
 }
+
 .poster-grid{
   margin-left: 80px;
   margin-top: 100px;
@@ -302,6 +325,19 @@ background-color: transparent;
 
 Poster-3{
   float: left;
+}
+
+/* Media query for mobile and tablet screens */
+@media (max-width: 768px) {
+  .poster-grid {
+    margin: 20px 0; /* Adjust margin for mobile/tablet */
+  }
+
+  .Poster-1 img, .Poster-2 img, .Poster-3 img {
+    width: 100%; /* Make images take full width */
+    float: none; /* Remove floats */
+    margin-bottom: 10px; /* Add spacing between images */
+  }
 }
 
 .AD-container {
@@ -582,42 +618,71 @@ Poster-3{
   margin: auto;
   margin-bottom: 20px;
   }
-
-.email{
-  margin: auto;
-  width: auto;
-  display: flex;
- flex-direction: column;
-  padding: 0px;
-}
-.em-slide {
-  margin: auto;
-  display: flex;
-  flex-direction: row; /* Horizontal direction */
-  align-items: center;
-  text-align: center;
-  white-space: nowrap; /* Prevent line breaks */
+/* Default CSS */
+.emailB {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 40px;
 }
 
-.em-slide img {
-  width: 40%;
-  margin: 20px; /* Add margin to separate images */
+.emailB img {
+    border-radius: 5px;
+    max-width: 90%;
+    height: auto;
 }
 
-
-
-.emailB{
-  margin: auto;
-  display: flex;
-  flex-direction: horizontal;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
+.headers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.emailB img{
-  width: 45%;
-  margin: 20px; /* Add margin to separate images */
+.headers img {
+    border-radius: 5px;
+    width: calc(35% - 30px);
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
 }
+
+/* Tablet CSS */
+@media only screen and (max-width: 768px) {
+    .emailB {
+        gap: 40px;
+    }
+
+    .emailB img {
+        margin: 20px;
+    }
+
+    .headers img {
+        margin: 10px;
+    }
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 480px) {
+    .emailB {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .emailB img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .headers img {
+        width: calc(100% - 20px);
+        margin: 5px;
+    }
+}
+
 
 
 .website {
@@ -640,9 +705,9 @@ Poster-3{
 
         /* Preloader */
   #preloader{
-    background: rgb(17, 17, 17) url(../Image/loader.gif) no-repeat center;
-    background-size: 40%;
-    height: 100vh;
+    background: rgb(17, 17, 17) url(Image/loader.gif) no-repeat center;
+    background-size: 100%;
+    height: auto;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -654,3 +719,66 @@ Poster-3{
     opacity: 0; /* Fade out the preloader */
     pointer-events: none; /* Disable pointer events on the preloader */
   }
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flipbook {
+    width: 100%;
+    max-width: 100%; /* Make the flipbook full-width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: calc(33.33% - 20px); /* Adjust the margin */
+    height: auto;
+    position: relative;
+    backface-visibility: hidden;
+    transition: transform 1s ease;
+    margin: 10px; /* Adjust the margin */
+}
+
+.page img {
+    width: 100%; /* Make the images full-width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+
+.page:nth-child(odd) {
+    transform-origin: left;
+}
+
+.page:nth-child(even) {
+    transform-origin: right;
+    transform: rotateY(180deg);
+}
+
+.page.flipped:nth-child(odd) {
+    transform: rotateY(-180deg);
+}
+
+.page.flipped:nth-child(even) {
+    transform: rotateY(0deg);
+}
+
+@media (max-width: 1024px) {
+    .flipbook .page {
+        width: calc(50% - 20px); /* Display two images per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .flipbook .page {
+        width: calc(100% - 20px); /* Display one image per row on mobile devices */
+    }
+}
