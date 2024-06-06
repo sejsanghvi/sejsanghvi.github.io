@@ -294,7 +294,8 @@ background-color: transparent;
   .cover p,
   .cover h4 {
     width: 100%;
-    margin-left: 0;
+    margin-left: 35px;
+    margin-right: 35px;
     margin-top: 20px; /* Adjust as needed */
     margin-bottom: 50px; /* Adjust as needed */
   }
