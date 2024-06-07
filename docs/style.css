@@ -723,16 +723,16 @@ Poster-3{
     height: auto;
 }
 
-.headers-zoom {
+.headers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.headers-zoom img {
+.headers img {
     border-radius: 5px;
-    width: calc(20% - 10px);
+    width: calc(35% - 10px);
     height: auto;
     margin: 10px;
     box-sizing: border-box;
