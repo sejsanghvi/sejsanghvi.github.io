@@ -499,30 +499,6 @@ Poster-3{
 }
 
 
-.lofi-zoom{
-  overflow: hidden; /* Hide the scrollbar */
-}
-
-.lofi-zoom-content {
-  display: flex;
-  animation: scroll 10s linear infinite; /* Scroll animation */
-}
-
-.lofi-zoom-content img {
-  width: 25%;
-  border-radius: 10px;
-  margin: 20px; /* Add margin to separate images */
-  flex-shrink: 0; /* Prevent images from shrinking */
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0); /* Start from the beginning */
-  }
-  100% {
-    transform: translateX(-50%); /* End at the end of the duplicated content */
-  }
-}
 
 .Key-grid {
     display: grid;
@@ -541,7 +517,7 @@ Poster-3{
 }
 
 .KeyA1, .KeyA2, .KeyB1, .KeyB2 {
-    background-color: #202020;
+    border: solid white 2px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -605,11 +581,11 @@ Poster-3{
 }
 
 .dis1, .dis2, .dis3 {
-    margin-top: 0; /* Reset top margin */
+    margin-top: -1em; /* Reset top margin */
 }
 
 .dis-numbers {
-    font-size: 3em; /* Font size adjustment */
+    font-size: 3.5em; /* Font size adjustment */
 }
 
 .dis-text {
@@ -680,6 +656,7 @@ Poster-3{
         margin: 10px; /* Added margin */
         box-sizing: border-box;
     }
+
 }
 
 /* Mobile CSS */
@@ -746,20 +723,37 @@ Poster-3{
     height: auto;
 }
 
-.headers {
+.headers-zoom {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.headers img {
+.headers-zoom img {
     border-radius: 5px;
-    width: calc(35% - 30px);
+    width: calc(20% - 10px);
     height: auto;
     margin: 10px;
     box-sizing: border-box;
 }
+
+
+.headers-zoom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.headers-zoom img {
+    border-radius: 5px;
+    width: calc(20% - 10px);
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
 
 /* Tablet CSS */
 @media only screen and (max-width: 768px) {
@@ -773,6 +767,14 @@ Poster-3{
 
     .headers img {
         margin: 10px;
+    }
+
+   .headers-zoom {
+        gap: 40px;
+    }
+
+    .headers-zoom img {
+        margin: 20px;
     }
 }
 
@@ -793,6 +795,20 @@ Poster-3{
     .headers img {
         width: calc(100% - 20px);
         margin: 5px;
+    }
+
+     .headers-zoom {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .headers-zoom img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        border-radius: 2px;
+        width: calc(100% - 20px);
     }
 }
 

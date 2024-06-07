@@ -34,14 +34,80 @@
     <div class="book">
       <div class="cover">
         <img src="Image/Zoom.png">
-          <p>In this UI/UX design initiative, we cater to remote workers, project managers, and team leaders utilizing platforms such as Zoom or Google Hangouts. The primary objective is to enhance the virtual meeting experience by introducing a feature that prominently displays meeting agendas and incorporates a timer. This user-centric approach seeks to address the specific needs of our diverse audience, aiming to optimize efficiency and productivity during remote collaborations.</p> 
+          <h4>This UI/UX design initiative is tailored for remote workers, project managers, and team leaders who rely on platforms like Zoom or Google Hangouts. The main goal is to elevate the virtual meeting experience by introducing a feature that prominently showcases meeting agendas and integrates a timer. This user-centric approach aims to meet the distinct needs of our diverse audience, with a focus on optimizing efficiency and productivity during remote collaborations.</h4> 
+          <p><i>In the post-COVID world, remote work has become the norm for many professionals. Recognizing this shift, I saw an opportunity to enhance this experience. By focusing on UI/UX design and addressing specific pain points such as organizing meetings and time management, our initiative aims to make remote work more seamless and productive for professionals across various industries.</i></p>
       </div>
 
+      <div class="AD">
+    <h3>Problem Statemnet</h3>
+    <p>Remote professionals lack streamlined tools to efficiently organize meeting agendas and manage time during virtual collaborations on platforms like Zoom or Google Hangouts. This results in inefficiencies, reduced productivity, and potential disengagement. As remote work becomes the norm, there's a critical need to enhance the virtual meeting experience for optimal efficiency and productivity.</p>
+</div>
      <div class="UXA">
         <h3>User Persona</h3>
         <img src="Image/Frame 3.png">
       </div>
 
+      <div class="AD">
+    <h3>Key Takeaways</h3>
+    <div class="disabilities">
+        <div class="dis1">
+            <div class="dis-numbers">
+                <span>40%</span>
+            </div>
+            <div class="dis-text">
+                <span>Online meetings exceed their scheduled time, causing time inefficiency and impacting productivity</span>
+            </div>
+        </div>
+        <div class="dis2">
+            <div class="dis-numbers">
+                <span>43%</span>
+            </div>
+            <div class="dis-text">
+                <span>Employees indicate a <br>struggle with agenda<br> clarity and structure<br>
+            </div>
+        </div>
+        <div class="dis3">
+            <div class="dis-numbers">
+                <span>71%</span>
+                <br>
+            </div>
+            <div class="dis-text">
+                 <span>Managers find that their meetings unproductive<br>due to time-inefficiency</span>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+  <div class="AD">
+    <h3>Proposed Solution</h3>
+    <div class="disabilities">
+        <div class="dis1">
+            <div class="dis-numbers">
+                <span><img src="Image/timer.png"></span>
+            </div>
+            <div class="dis-text">
+                <span>Timer clock</span>
+            </div>
+        </div>
+        <div class="dis2">
+            <div class="dis-numbers">
+                <span><img src="Image/agenda.png"></span>
+            </div>
+            <div class="dis-text">
+                <span>Agenda view</span>
+            </div>
+        </div>
+        <div class="dis3">
+            <div class="dis-numbers">
+                <span><img src="Image/chat.png"></span>
+                <br>
+            </div>
+            <div class="dis-text">
+                 <span>Live Chat</span>
+            </div>
+        </div>
+    </div>
+</div>
       <div class="UXA">
         <h3>Information Architecture</h3>
         <img src="Image/Information Architecture Template-3.png">
@@ -52,14 +118,17 @@
     <h3>Lo-Fi Prototype</h3>
   </div>
   
-  <div class="lofi-zoom">
-    <div class="lofi-zoom-content">
-      <img src="Image/Desktop - 2.png" alt="Prototype Image 1">
-      <img src="Image/Desktop - 3.png" alt="Prototype Image 2">
-      <img src="Image/Desktop - 4.png" alt="Prototype Image 3">
+  <div class="headers-zoom">
+   
       <img src="Image/Desktop - 5.png" alt="Prototype Image 4">
+      <img src="Image/Desktop - 4.png" alt="Prototype Image 3">
+      <img src="Image/Desktop - 3.png" alt="Prototype Image 2">
       <img src="Image/Desktop - 6.png" alt="Prototype Image 5">
-    </div>
+      <img src="Image/Desktop - 2.png" alt="Prototype Image 1">
+      <img src="Image/Desktop - 7.png" alt="Prototype Image 5">
+      <img src="Image/Desktop - 8.png" alt="Prototype Image 1">
+      <img src="Image/Desktop - 1.png" alt="Prototype Image 1">
+    
   </div>
 <div>
   <div class="UXA">
@@ -130,16 +199,6 @@
         document.getElementById('preloader').classList.add('loaded');
       });
     </script>
-    <script > document.addEventListener('DOMContentLoaded', function() {
-  const lofiZoomContent = document.querySelector('.lofi-zoom-content');
-  const lofiImages = Array.from(lofiZoomContent.children);
-
-  // Duplicate images for seamless scroll
-  lofiImages.forEach(image => {
-    const clone = image.cloneNode(true);
-    lofiZoomContent.appendChild(clone);
-  });
-});
-</script>
+    
 </body>
 </html>
