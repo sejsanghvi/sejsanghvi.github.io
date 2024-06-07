@@ -578,63 +578,159 @@ Poster-3{
 
 
 .AD {
-  background-color: #202020; /* Change to dark grey */
-  border-radius: 10px;
-  width: 80%;
-  height: auto;
-  margin: auto;
-  padding: auto;
-  text-align: left; /* Center-align text content */
-  font-size: 20px;
-  line-height: 1.5;
+    background-color: black; /* Change to dark grey */
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 20px 40px;
+    text-align: left; /* Align text content to the left */
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    border: solid white 2px;
 }
 
-.AD h3,
-.AD p {
-  padding: 20px 40px; /* Adjusted padding for both h3 and p elements */
+.AD h3, .AD p {
+    padding: 20px 40px; /* Adjusted padding for both h3 and p elements */
 }
 
 .disabilities {
-  width: 80%; /* Adjusted width for responsiveness */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjusted columns to fit content */
-  padding: auto; /* Adjusted padding for grid */
-  margin: auto; /* Centered horizontally */
-  font-size: 1em; /* Font size adjustment */
-  line-height: 1.5;
+    width: 80%; /* Adjusted width for responsiveness */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjusted columns to fit content */
+    gap: 20px;
+    margin: auto; /* Centered horizontally */
+    font-size: 1em; /* Font size adjustment */
+    line-height: 1.5;
 }
 
 .dis1, .dis2, .dis3 {
-  margin-top: 0; /* Reset top margin */
+    margin-top: 0; /* Reset top margin */
 }
 
 .dis-numbers {
-  font-size: 3em; /* Font size adjustment */
+    font-size: 3em; /* Font size adjustment */
 }
 
 .dis-text {
-  font-size: 1em; /* Font size adjustment */
+    font-size: 1em; /* Font size adjustment */
 }
 
-
-.UXC h3, .UXA h3 {
-  margin-left: 70px;
-  margin-top: 100px;
-  font-size: 25px;
-  line-height: 1.5;
-  margin-bottom: 40px;
+ .UXA h3 {
+    margin-left: 70px;
+    margin-top: 100px;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 40px;
 }
 
 .UXA img {
-  display: flex; /* Use flexbox to align items */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Horizontally center the .UXB div */
-  width: 90%; /* Set the width of the image */
-  display: block; /* Make the image a block element to center it */
-  border-radius: 10px;
-  margin: auto;
-  margin-bottom: 20px;
-  }
+    display: block; /* Make the image a block element to center it */
+    width: 86%; /* Set the width of the image */
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.UX {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.UX img {
+    border-radius: 5px;
+    width: calc(43% - 20px);
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* Tablet CSS */
+@media (max-width: 768px) {
+    .AD {
+        width: 90%;
+        padding: 15px 30px;
+    }
+
+    .AD h3, .AD p {
+        padding: 15px 30px;
+    }
+
+    .disabilities {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .UXA h3 {
+        margin-left: 50px;
+        margin-top: 80px;
+        font-size: 22px;
+    }
+
+    .UXA img {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+     .UX img {
+        border-radius: 5px;
+        width: calc(50% - 20px); /* Adjusted width for two columns */
+        margin: 10px; /* Added margin */
+        box-sizing: border-box;
+    }
+}
+
+/* Mobile CSS */
+@media (max-width: 480px) {
+    .AD {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .AD h3, .AD p {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .disabilities {
+        width: 100%;
+        display: block; /* Stack items vertically */
+        gap: 10px;
+    }
+
+    .dis1, .dis2, .dis3 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dis-numbers {
+        font-size: 2.5em;
+    }
+
+    .dis-text {
+        font-size: 1em;
+    }
+
+    .UXA h3 {
+        margin-left: 20px;
+        margin-top: 60px;
+        font-size: 20px;
+    }
+
+
+   .UX img {
+        border-radius: 5px;
+        width: calc(100% - 20px); /* Adjusted width for full width */
+        margin: 10px; /* Added margin */
+        box-sizing: border-box;
+    }
+
+}
+
+
+
 /* Default CSS */
 .emailB {
     display: flex;
