@@ -738,8 +738,7 @@ Poster-3{
     box-sizing: border-box;
 }
 
-
-.headers-zoom{
+.headers-zoom {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -754,22 +753,17 @@ Poster-3{
     box-sizing: border-box;
 }
 
-
 /* Tablet CSS */
 @media only screen and (max-width: 768px) {
-    .emailB {
+    .headers {
         gap: 40px;
     }
 
-    .emailB img {
+    .headers img {
         margin: 20px;
     }
 
-    .headers img {
-        margin: 10px;
-    }
-
-   .headers-zoom {
+    .headers-zoom {
         gap: 40px;
     }
 
@@ -780,24 +774,12 @@ Poster-3{
 
 /* Mobile CSS */
 @media only screen and (max-width: 480px) {
-    .emailB {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .emailB img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px auto;
-    }
-
     .headers img {
         width: calc(100% - 20px);
         margin: 5px;
     }
 
-     .headers-zoom {
+    .headers-zoom {
         display: block;
         text-align: center;
         margin-bottom: 20px;
@@ -811,7 +793,6 @@ Poster-3{
         width: calc(100% - 20px);
     }
 }
-
 
 
 .website {
