@@ -137,7 +137,7 @@ background-color: transparent;
   }
 }
 
-/* Base styles for grid container */
+/* Base styles for grid container for work*/
 .grid-container {
   width: auto;
   justify-content: space-between;
@@ -361,121 +361,38 @@ Poster-3{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: auto; /* Center align horizontally */
-  width: 82%; /* Adjusted width */
+  width: 86%;
+  margin: auto;
+  padding: 40px 0;
+  gap: 20px;
 }
 
 .AD-edit {
-  background-color: #202020; /* Change to dark grey */
+  border: 2px solid white;
   border-radius: 10px;
-  width: 45%; /* Adjusted width for both items */
-  height: auto;
-  margin: 20px auto; /* Added margin */
-  padding: 20px; /* Adjusted padding */
-  text-align: left; /* Left-align text content */
-  font-size: 20px;
-  line-height: 1.5;
-}
-.UXA-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 45%; /* Adjusted width for better alignment */
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  font-size: 18px; /* Reduced font size for better readability */
+  line-height: 1.6; /* Slightly increased line height */
 }
 
+
 .UXA-edit {
-  width: 40%; /* Adjusted width for each item */
+  width: 45%; /* Adjusted width for each item */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto; /* Adjusted margin */
+  
 }
 
 .UXA-edit img {
   width: 100%; /* Adjusted width for images */
-}
-
-.UXA-container2 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.UXA-edit2 {
-  width: 40%; /* Adjusted width for each item */
-  display: flex;
-  flex-direction: column;
-  margin: auto; /* Adjusted margin */
-}
-
-.inT{
-  font-size: 25px;
-  margin-bottom: 0px;
-}
-
-.inN{
-  font-size: 55px;
-  margin-top: 0px;
- 
-}
-
-
-.Takeaway{
-    width: auto;
-    justify-content: space-between;
-/*    justify-items: center;*/
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 30px; /* Gap between grid items */
-    padding: 0px;
-    margin: 60px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.Takeaway h3{
-  font-size: 25px;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.takeaway-A h3, .takeaway-B h3{
-  font-size: 20px;
-  display: flex;
-  justify-items: center;
-  align-text:center;
-  margin: 45px;
-  margin-bottom: 20px;
-}
-
-.S1{
-  margin: auto;
-  font-size: 17px;
-  background-color: #202020 ; /* Change to darkgrey */
   border-radius: 10px;
-  width: 80%;
-  height: 75px;
-  padding: 20px;
-  padding-bottom: 40px;
-  margin-bottom: 20px;
-  justify-items: center;
-
 }
 
-.takeaway-A{
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-.takeaway-B{
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
 
 .flow{
   display: flex; /* Use flexbox */
@@ -498,44 +415,60 @@ Poster-3{
   margin-bottom: 20px;
 }
 
+/* For tablets */
+@media only screen and (max-width: 1024px) {
+  .AD-container {
+    width: 90%; /* Adjusted width for tablets */
+    padding: 30px 0; /* Adjusted padding */
+    gap: 15px; /* Adjusted gap */
+  }
 
+  .AD-edit {
+    width: 100%; /* Adjusted width for tablets */
+    padding: 20px; /* Adjusted padding */
+    font-size: 18px; /* Reset font size */
+    line-height: 1.6; /* Reset line height */
+  }
 
-.Key-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns with equal width */
-    grid-gap: 20px;
-    padding: 0;
-    margin: 0 40px;
+  .UXA-edit {
+    width: 100%; /* Adjusted width for tablets */
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .flow img {
+    margin-left: 100px; /* Adjusted margin for tablets */
+    width: 45%; /* Adjusted width for tablets */
+  }
 }
 
-.KeyA1, .KeyB1 {
-    margin-bottom: 20px; /* Add space between A1 and A2, and between B1 and B2 */
-}
+/* For mobile */
+@media only screen and (max-width: 768px) {
+  .AD-container {
+    width: 100%; /* Full width for mobile */
+    padding: 20px 0; /* Adjusted padding */
+    gap: 10px; /* Adjusted gap */
+  }
 
-.KeyA2, .KeyB2 {
-    margin-top: 20px; /* Add space between A1 and A2, and between B1 and B2 */
-}
+  .AD-edit {
+    width: 100%; /* Full width for mobile */
+    padding: 15px; /* Adjusted padding */
+    font-size: 16px; /* Further reduced font size */
+    line-height: 1.4; /* Further increased line height */
+  }
 
-.KeyA1, .KeyA2, .KeyB1, .KeyB2 {
-    border: solid white 2px;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* Arrange content vertically */
-}
+  .UXA-edit {
+    width: 100%; /* Full width for mobile */
+    padding: 15px; /* Adjusted padding */
+  }
 
-.KeyA1 h3, .KeyA2 h3, .KeyB1 h3, .KeyB2 h3 {
-    margin-top: 0; /* Remove default margin */
-}
+  .flow img {
+    margin-left: 0; /* Center images horizontally */
+    width: 90%; /* Full width for mobile */
+  }
 
-.KeyA1 p, .KeyA2 p, .KeyB1 p, .KeyB2 p {
-    margin-top: 20px; /* Add gap between h3 and p */
-}
-
-@media (max-width: 768px) {
-    .Key-grid {
-        grid-template-columns: 1fr; /* Change to a single column for smaller screens */
-    }
+  .UXA {
+    margin-bottom: 10px; /* Reduced margin */
+  }
 }
 
 
@@ -550,7 +483,6 @@ Poster-3{
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
 }
-
 
 
 .AD {
