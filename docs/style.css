@@ -91,7 +91,7 @@ background-color: transparent;
   margin-left: 150px;
 }
 
-* Tablet screen styles (max-width: 768px) */
+/* Tablet screen styles (max-width: 768px) */
 @media (max-width: 768px) {
   /* Adjustments for tablet screens */
   .menu-bar {
@@ -109,6 +109,7 @@ background-color: transparent;
 
   .menu-bar a {
     padding-right: 30px;
+    font-size: 12px;
   }
 
   .below-bar .left .name {
@@ -130,6 +131,7 @@ background-color: transparent;
 
   .menu-bar a {
     padding-right: 10px;
+    font-size: 10px;
   }
 
   .below-bar .left .name {
@@ -270,51 +272,37 @@ background-color: transparent;
   text-decoration: none;
 }
 
-/* Media queries for tablets and mobile devices */
-@media only screen and (max-width: 768px) {
-
+/* Media queries for tablets (min-width: 601px and max-width: 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   .aboutme {
-  grid-gap: 20px; /* Gap between grid items */
-  padding: 30px; /* Adjust padding as needed */
-  margin: 30px;
-}
+    grid-gap: 15px; /* Gap between grid items for tablets */
+    padding: 40px; /* Adjust padding for tablets */
+    margin: 50px; /* Adjust margin for tablets */
+  }
+
   .bio, .resume {
-    width: 100%; /* Adjust width to full screen on tablets and mobile */
-    padding: 0 20px; /* Add horizontal padding for better readability */
+    width: 80%; /* Adjust width for tablets */
+    padding: 0 20px; /* Add horizontal padding for better readability on tablets */
   }
 }
 
-.cover p {
-  width: 50%;
-  margin-left: 45%;
-  text-align: left;
-  color:white;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  font-size: 16px;
-  line-height: 1.5
-}
-
-.cover h4{
-  width: 50%;
-  margin-left: 45%;
-  text-align: left;
-  color:white;
-  margin-top: 50px;
-  font-size: 25px;
-  line-height: 1.5
-}
-
-/* Media query for tablet screens */
-@media (max-width: 768px) {
-  .cover p,
-  .cover h4 {
-    width: 100%;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-top: 20px; /* Adjust as needed */
-    margin-bottom: 50px; /* Adjust as needed */
+/* Media queries for mobile devices (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  .aboutme {
+    grid-gap: 10px; /* Gap between grid items for mobile devices */
+    padding: 30px; /* Adjust padding for mobile devices */
+    margin: 30px; /* Adjust margin for mobile devices */
   }
+
+  .bio, .resume {
+    width: 100%; /* Adjust width to full screen on mobile devices */
+    padding: 0 10px; /* Add horizontal padding for better readability on mobile devices */
+  }
+  /* Bio paragraph style */
+.bio p, .resume  {
+  font-size: 14px; /* Adjust font size for paragraphs */
+  
+ }
 }
 
 .book{
@@ -322,6 +310,67 @@ background-color: transparent;
   margin-bottom: 300px;
   line-height: 1.5
 }
+
+/* Default styles */
+.cover p {
+  width: 50%;
+  margin-left: 45%;
+  text-align: left;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cover h4 {
+  width: 50%;
+  margin-left: 45%;
+  text-align: left;
+  color: white;
+  margin-top: 50px;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+  .cover p,
+  .cover h4 {
+    width: 90%;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 50px; /* Adjust as needed */
+  }
+.cover p{
+  font-size: 14px;
+}
+.cover h4{
+  font-size: 18px;
+}
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+  .cover p,
+  .cover h4 {
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 40px; /* Adjust as needed */
+  }
+
+  .cover h4 {
+    font-size:18px ;
+  }
+
+  .cover p{
+    font-size: 14px;
+  }
+}
+
 
 .poster-grid{
   margin-left: 80px;
@@ -399,7 +448,7 @@ Poster-3{
   flex-direction: column;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.5;
   margin: auto;
 }
@@ -416,17 +465,17 @@ Poster-3{
 }
 
 /* For tablets */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .AD-container {
-    width: 90%; /* Adjusted width for tablets */
-    padding: 30px 0; /* Adjusted padding */
-    gap: 15px; /* Adjusted gap */
+    width: 86%; /* Adjusted width for tablets */
+    padding: 30px ; /* Adjusted padding */
+    
   }
 
   .AD-edit {
     width: 100%; /* Adjusted width for tablets */
-    padding: 20px; /* Adjusted padding */
-    font-size: 18px; /* Reset font size */
+    padding: 40px;
+    font-size: 15px; /* Reset font size */
     line-height: 1.6; /* Reset line height */
   }
 
@@ -439,12 +488,15 @@ Poster-3{
     margin-left: 100px; /* Adjusted margin for tablets */
     width: 45%; /* Adjusted width for tablets */
   }
+  .flow h3{
+    font-size: 20px;
+  }
 }
 
 /* For mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .AD-container {
-    width: 100%; /* Full width for mobile */
+    width: 88%; /* Full width for mobile */
     padding: 20px 0; /* Adjusted padding */
     gap: 10px; /* Adjusted gap */
   }
@@ -452,7 +504,7 @@ Poster-3{
   .AD-edit {
     width: 100%; /* Full width for mobile */
     padding: 15px; /* Adjusted padding */
-    font-size: 16px; /* Further reduced font size */
+    font-size: 12px; /* Further reduced font size */
     line-height: 1.4; /* Further increased line height */
   }
 
@@ -464,6 +516,10 @@ Poster-3{
   .flow img {
     margin-left: 0; /* Center images horizontally */
     width: 90%; /* Full width for mobile */
+  }
+
+  .flow h3{
+    font-size: 18px;
   }
 
   .UXA {
@@ -558,8 +614,9 @@ Poster-3{
 /* Tablet CSS */
 @media (max-width: 768px) {
     .AD {
-        width: 90%;
-        padding: 15px 30px;
+        font-size: 15px;
+        width: 80%;
+        padding: 15px 15px;
     }
 
     .AD h3, .AD p {
@@ -573,8 +630,9 @@ Poster-3{
 
     .UXA h3 {
         margin-left: 50px;
+        margin-right: 50px;
         margin-top: 80px;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .UXA img {
@@ -594,13 +652,13 @@ Poster-3{
 /* Mobile CSS */
 @media (max-width: 480px) {
     .AD {
-        width: 100%;
-        padding: 10px 20px;
+        width: 70%;
+        padding: 10px 10px;
     }
 
     .AD h3, .AD p {
         padding: 10px 20px;
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .disabilities {
@@ -624,8 +682,9 @@ Poster-3{
 
     .UXA h3 {
         margin-left: 20px;
+        margin-right: 20px;
         margin-top: 60px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
 
@@ -845,7 +904,6 @@ Poster-3{
   }
 
   
-
 .gallery-wrapper {
     display: flex;
     justify-content: center;
