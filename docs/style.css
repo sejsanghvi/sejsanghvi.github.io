@@ -826,20 +826,25 @@ Poster-3{
 
         /* Preloader */
   #preloader{
-    background: rgb(17, 17, 17) url(Image/loader.gif) no-repeat center;
-    background-size: 100%;
-    height: auto;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    opacity: 1; /* Initial opacity */
-    transition: opacity 1.0s ease-out; 
+    background: rgb(0, 0, 0) url('Image/loader.gif') no-repeat center center;
+  background-size: contain; /* Adjust based on your loader gif */
+  height: auto;
+  width: 100%; /* Set the desired width */
+  position: fixed; /* Fix it to the viewport */
+  top: 50%; /* Position it at the center */
+  left: 50%; /* Position it at the center */
+  transform: translate(-50%, -50%); /* Center it */
+  z-index: 100; /* Ensure it's on top of other elements */
+  opacity: 1; /* Initial opacity */
+  transition: opacity 1.0s ease-out; /* Smooth fade-out transition */
   }
   
   #preloader.loaded {
     opacity: 0; /* Fade out the preloader */
     pointer-events: none; /* Disable pointer events on the preloader */
   }
+
+  
 
 .gallery-wrapper {
     display: flex;
