@@ -30,7 +30,7 @@ canvas {
   z-index: 0;
 }
 
-.menu-bar, .below-bar, .grid-container,.bottom, .bio, .resume {
+.menu-bar, .below-bar, .grid-container,.bottom, .bio, .resume, .bottom-web {
 width: 100%;
 display: flex;
 justify-content: space-between;
@@ -675,7 +675,7 @@ Poster-3{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
+    }
 
 .headers-zoom img {
     border-radius: 5px;
@@ -684,6 +684,7 @@ Poster-3{
     margin: 10px;
     box-sizing: border-box;
 }
+
 
 /* Tablet CSS */
 @media only screen and (max-width: 768px) {
@@ -723,6 +724,84 @@ Poster-3{
         margin: 10px auto;
         border-radius: 2px;
         width: calc(100% - 20px);
+    }
+}
+
+
+/* Container for each image and caption */
+.headers-art {
+    display: inline-block; /* Ensures each div appears in a row */
+    width: calc(98% / 3 - 20px); /* Adjust width to fit three columns with gaps */
+    margin-right: 10px; /* Creates gap between columns */
+    margin-left: 10px;
+    text-align: center;
+}
+
+/* Styling for the images */
+.headers-art img {
+    display: block; /* Ensures image takes up full width of container */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 10px; /* Adds space between image and caption */
+}
+
+/* Styling for the text (caption) */
+.headers-art p {
+    color: white;
+    font-size: 14px;
+}
+
+/* Style for the bottom section */
+.bottom-web span {
+  margin: 40px auto; /* Center align horizontally with auto margin */
+  width: 40%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.bottom-web span a {
+  color: white;
+  text-decoration: underline;
+}
+
+.bottom-web span p {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Media query for tab screens */
+@media screen and (max-width: 1024px) {
+    .headers-art {
+        width: calc(98% / 2 - 20px); /* Adjust width for two columns */
+    }
+
+    .bottom-web span {
+        width: 50%; /* Adjust width for tab screens */
+        font-size: 18px; /* Adjust font size */
+    }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 480px) {
+    .headers-art {
+        display: block; /* Change display to block for vertical alignment */
+        width: 90%; /* Adjust width for mobile screens */
+        margin: 10px auto; /* Center align horizontally with auto margin */
+    }
+
+    .bottom-web span {
+        width: 80%; /* Adjust width for mobile screens */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .bottom-web span p {
+        font-size: 13px; /* Adjust font size for mobile screens */
     }
 }
 
