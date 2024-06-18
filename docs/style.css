@@ -575,7 +575,18 @@ Poster-3{
 .dis-numbers {
     font-size: 3.5em; /* Font size adjustment */
 }
+/* Base styles for the images */
+.AD .dis-numbers img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+}
 
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+    .AD .dis-numbers img {
+        width: 30px; /* Adjust the size of the images for mobile view */
+    }
+}
 .dis-text {
     font-size: 1em; /* Font size adjustment */
 }
