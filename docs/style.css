@@ -52,7 +52,6 @@ background-color: transparent;
   z-index: 1; /* Place menu bar above canvas */
 }
 
-
 /* Left and right sections of the menu bar */
 .menu-bar .left {
   flex-grow: 1;
@@ -71,9 +70,6 @@ background-color: transparent;
   text-decoration: none;
   padding-right: 100px;
 }
-
-
-
   
  /* Below bar styles */
 .below-bar {
@@ -81,7 +77,7 @@ background-color: transparent;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  margin-top: 0px;
+  margin-top: 100px;
 }
 
 /* Text styles in the below bar */
@@ -118,7 +114,7 @@ background-color: transparent;
 
 /* Mobile screen styles (max-width: 480px) */
 @media (max-width: 480px) {
- /* Adjustments for mobile screens */
+  /* Adjustments for mobile screens */
   .menu-bar .left {
     margin-left: 10px;
   }
@@ -131,7 +127,6 @@ background-color: transparent;
     padding-right: 10px;
     font-size: 10px;
   }
-
 
   .below-bar .left .name {
     margin-left: 30px;
