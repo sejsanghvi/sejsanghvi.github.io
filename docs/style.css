@@ -13,7 +13,6 @@ body {
   position: relative;
   overflow-y: scroll; /* Always show vertical scrollbar */
   overflow-x:hidden;
-
 }
 
 hr {
@@ -30,20 +29,18 @@ canvas {
   z-index: 0;
 }
 
-.menu-bar, .below-bar, .grid-container,.bottom, .bio, .resume, .bottom-web {
-width: 100%;
-display: flex;
-justify-content: space-between;
-padding: 10px 20px;
-position: relative;
-z-index: 1; /* Place menu bar and below bar above canvas */
-background-color: transparent;
-
+/* Menu bar styles */
+.menu-bar, .below-bar, .grid-container, .bottom, .bio, .resume, .bottom-web {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1; /* Place menu bar and below bar above canvas */
+  background-color: transparent;
 }
 
-/* Menu bar styles */
 .menu-bar {
-  width: 100%;
   font-size: 13px;
   display: flex;
   justify-content: space-between;
@@ -52,7 +49,6 @@ background-color: transparent;
   z-index: 1; /* Place menu bar above canvas */
 }
 
-/* Left and right sections of the menu bar */
 .menu-bar .left {
   flex-grow: 1;
   align-items: left;
@@ -64,23 +60,20 @@ background-color: transparent;
   margin-right: 30px;
 }
 
-/* Links in the menu bar */
 .menu-bar a {
   color: white; /* Set link text color to white */
   text-decoration: none;
   padding-right: 100px;
 }
-  
- /* Below bar styles */
+
+/* Below bar styles */
 .below-bar {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   margin-top: 100px;
 }
 
-/* Text styles in the below bar */
 .below-bar .left .name {
   font-size: 14px;
   color: white; /* Set text color to white */
@@ -91,63 +84,20 @@ background-color: transparent;
   margin-left: 150px;
 }
 
-/* Tablet screen styles (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Adjustments for tablet screens */
-  .menu-bar {
-    padding-bottom: 30px;
-  }
-
-  .menu-bar .left {
-    margin-left: 20px;
-  }
-
-  .menu-bar a {
-    padding-right: 30px;
-    font-size: 12px;
-  }
-
-  .below-bar .left .name {
-    margin-left: 80px;
-  }
-}
-
-/* Mobile screen styles (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Adjustments for mobile screens */
-  .menu-bar .left {
-    margin-left: 10px;
-  }
-
-  .menu-bar{
-    font-size: 10px;
-  }
-
-  .menu-bar a {
-    padding-right: 10px;
-    font-size: 10px;
-  }
-
-  .below-bar .left .name {
-    margin-left: 30px;
-  }
-}
-
-/* Base styles for grid container for work*/
+/* Grid container for work */
 .grid-container {
-  width: auto;
-  justify-content: space-between;
-  justify-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
   gap: 50px; /* Reduced gap between grid items */
   padding: 50px;
   align-items: center; /* Center items vertically */
-  margin-bottom: 300px;
   margin-top: 100px;
+  margin-bottom: 300px;
+  position: relative; /* Ensure relative positioning */
+  left: 50%; /* Move the container 50% to the left */
+  transform: translateX(-50%); /* Center the container horizontally */
 }
 
-/* Style for each grid item (image) */
 .grid-item {
   display: flex;
   flex-direction: column;
@@ -161,18 +111,13 @@ background-color: transparent;
   height: auto;
 }
 
-/* Style for the paragraph within grid items */
 .grid-item p {
   margin: 10px;
   font-size: 12px;
   color: white;
 }
 
-.grid-item a {
-  text-decoration: none;
-}
-
-/* Style for the bottom section */
+/* Bottom section styles */
 .bottom span {
   margin-top: 0px;
   margin-left: auto;
@@ -191,8 +136,52 @@ background-color: transparent;
   text-decoration: none;
 }
 
-/* Media query for tablets (portrait and landscape) */
+/* About me section */
+.aboutme {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-gap: 20px; /* Gap between grid items */
+  padding: 50px; /* Adjust padding as needed */
+  margin: 70px;
+}
+
+/* Bio and resume styles */
+.bio, .resume {
+  width: 55%;
+  text-align: left;
+  color: white;
+}
+
+.bio p {
+  font-size: 16px; /* Adjust font size for paragraphs */
+  line-height: 1.5; /* Increase line height for better readability */
+  margin-bottom: 20px; /* Add margin between paragraphs */
+}
+
+.resume a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media queries for tablets */
 @media (max-width: 768px) {
+  .menu-bar {
+    padding-bottom: 30px;
+  }
+
+  .menu-bar .left {
+    margin-left: 20px;
+  }
+
+  .menu-bar a {
+    padding-right: 30px;
+    font-size: 12px;
+  }
+
+  .below-bar .left .name {
+    margin-left: 80px;
+  }
+
   .grid-container {
     grid-template-columns: repeat(2, 1fr); /* Two columns layout */
     gap: 30px; /* Adjusted gap for smaller screens */
@@ -211,8 +200,25 @@ background-color: transparent;
   }
 }
 
-/* Media query for mobile devices (portrait and landscape) */
+/* Media queries for mobile devices */
 @media (max-width: 480px) {
+  .menu-bar .left {
+    margin-left: 10px;
+  }
+
+  .menu-bar {
+    font-size: 10px;
+  }
+
+  .menu-bar a {
+    padding-right: 10px;
+    font-size: 10px;
+  }
+
+  .below-bar .left .name {
+    margin-left: 30px;
+  }
+
   .grid-container {
     grid-template-columns: 1fr; /* Single column layout */
     gap: 20px; /* Adjusted gap for smaller screens */
@@ -233,74 +239,16 @@ background-color: transparent;
     width: 80%; /* Adjusted width for smaller screens */
     font-size: 11px; /* Adjusted font size */
   }
-}
 
-
-/* Grid container for about me section */
-.aboutme {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 20px; /* Gap between grid items */
-  padding: 50px; /* Adjust padding as needed */
-  margin: 70px;
-}
-
-/* Bio grid item */
-.bio, .resume {
-  width: 55%;
-  text-align: left;
-  color: white;
-}
-
-/* Bio paragraph style */
-.bio p {
-  font-size: 16px; /* Adjust font size for paragraphs */
-  line-height: 1.5; /* Increase line height for better readability */
-  margin-bottom: 20px; /* Add margin between paragraphs */
-}
-
-
-/* Resume link style */
-.resume a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Media queries for tablets (min-width: 601px and max-width: 1024px) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .aboutme {
-    grid-gap: 15px; /* Gap between grid items for tablets */
-    padding: 40px; /* Adjust padding for tablets */
-    margin: 50px; /* Adjust margin for tablets */
-  }
-
-  .bio, .resume {
-    width: 80%; /* Adjust width for tablets */
-    padding: 0 20px; /* Add horizontal padding for better readability on tablets */
+  .bio p,
+  .resume p {
+    font-size: 14px; /* Adjust font size for paragraphs */
   }
 }
 
-/* Media queries for mobile devices (max-width: 600px) */
-@media only screen and (max-width: 600px) {
-  .aboutme {
-    grid-gap: 10px; /* Gap between grid items for mobile devices */
-    padding: 30px; /* Adjust padding for mobile devices */
-    margin: 30px; /* Adjust margin for mobile devices */
-  }
-
-  .bio, .resume {
-    width: 100%; /* Adjust width to full screen on mobile devices */
-    padding: 0 10px; /* Add horizontal padding for better readability on mobile devices */
-  }
-  /* Bio paragraph style */
-.bio p, .resume  {
-  font-size: 14px; /* Adjust font size for paragraphs */
-  
- }
-}
 
 .book{
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 300px;
   line-height: 1.5
 }
@@ -313,24 +261,28 @@ background-color: transparent;
   color: white;
   margin-top: 50px;
   margin-bottom: 100px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
-.cover h4 {
+.cover h4, .Template h4 {
   width: 50%;
   margin-left: 45%;
   text-align: left;
   color: white;
   margin-top: 50px;
-  font-size: 25px;
+  font-size: 40px;
   line-height: 1.5;
+}
+.Template h4{
+  margin: auto;
+  text-align: center;
 }
 
 /* Media query for tablet screens */
 @media (max-width: 768px) {
   .cover p,
-  .cover h4 {
+  .cover h4{
     width: 90%;
     margin-left: 35px;
     margin-right: 35px;
@@ -340,8 +292,8 @@ background-color: transparent;
 .cover p{
   font-size: 14px;
 }
-.cover h4{
-  font-size: 18px;
+.cover h4, .Template h4 {
+  font-size: 22px;
 }
 }
 
@@ -356,8 +308,8 @@ background-color: transparent;
     margin-bottom: 40px; /* Adjust as needed */
   }
 
-  .cover h4 {
-    font-size:18px ;
+  .cover h4, .Template h4  {
+    font-size:22px ;
   }
 
   .cover p{
@@ -400,20 +352,70 @@ Poster-3{
   }
 }
 
-.AD-container {
+.column-main{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 86%;
   margin: auto;
-  padding: 40px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
   gap: 20px;
 }
 
-.AD-edit {
+.column-main img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.column-two-img{
+  width: 43%; /* Adjusted width for better alignment */
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  font-size: 18px; /* Reduced font size for better readability */
+  line-height: 1.6; /* Slightly increased line height */
+}
+
+.column-three {
+   width: calc(30% - 10px);
+   float: left;
+   margin: 0;
+   font: white;
+   padding: 20px;
+   box-sizing: border-box;
+   border: 2px solid white;
+   border-radius: 10px;
+   min-height: 240px; /* Adjust the value as needed */
+    }
+    .column-three:last-child {
+        margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+        .column-three {
+            width: calc(30% - 20px);
+            font-size: 14px;
+        }
+
+        .column-three h2{
+          font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .column-three {
+            font-size: 12px;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+
+.column-two {
   border: 2px solid white;
   border-radius: 10px;
-  width: 45%; /* Adjusted width for better alignment */
+  width: 43%; /* Adjusted width for better alignment */
   margin: 0;
   padding: 20px;
   text-align: left;
@@ -437,36 +439,22 @@ Poster-3{
 }
 
 
-.flow{
-  display: flex; /* Use flexbox */
-  flex-direction: column;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  font-size: 25px;
-  line-height: 1.5;
-  margin: auto;
-}
-
-.flow img {
-    margin-left: 100px;
-    width: 45%; /* Adjust the width as needed */
-    /* Other styles for images */
-}
-
-.UXA {
+.Template {
   text-align: center;
   margin-bottom: 20px;
 }
 
 /* For tablets */
 @media only screen and (max-width: 768px) {
-  .AD-container {
+  .column-main {
     width: 86%; /* Adjusted width for tablets */
     padding: 30px ; /* Adjusted padding */
+    margin-top: 10px;
+    margin-bottom: 10px;
     
   }
 
-  .AD-edit {
+  .column-two{
     width: 100%; /* Adjusted width for tablets */
     padding: 40px;
     font-size: 15px; /* Reset font size */
@@ -478,24 +466,17 @@ Poster-3{
     padding: 20px; /* Adjusted padding */
   }
 
-  .flow img {
-    margin-left: 100px; /* Adjusted margin for tablets */
-    width: 45%; /* Adjusted width for tablets */
-  }
-  .flow h3{
-    font-size: 20px;
-  }
 }
 
 /* For mobile */
 @media only screen and (max-width: 480px) {
-  .AD-container {
+  .column-main {
     width: 88%; /* Full width for mobile */
     padding: 20px 0; /* Adjusted padding */
     gap: 10px; /* Adjusted gap */
   }
 
-  .AD-edit {
+  .column-two {
     width: 100%; /* Full width for mobile */
     padding: 15px; /* Adjusted padding */
     font-size: 12px; /* Further reduced font size */
@@ -507,16 +488,7 @@ Poster-3{
     padding: 15px; /* Adjusted padding */
   }
 
-  .flow img {
-    margin-left: 0; /* Center images horizontally */
-    width: 90%; /* Full width for mobile */
-  }
-
-  .flow h3{
-    font-size: 18px;
-  }
-
-  .UXA {
+  .Template {
     margin-bottom: 10px; /* Reduced margin */
   }
 }
@@ -535,7 +507,7 @@ Poster-3{
 }
 
 
-.AD {
+.column-one {
     background-color: black; /* Change to dark grey */
     border-radius: 10px;
     width: 80%;
@@ -548,7 +520,7 @@ Poster-3{
     border: solid white 2px;
 }
 
-.AD h3, .AD p {
+.column-one h3, .column-one p {
     padding: 20px 40px; /* Adjusted padding for both h3 and p elements */
 }
 
@@ -567,17 +539,17 @@ Poster-3{
 }
 
 .dis-numbers {
-    font-size: 3.5em; /* Font size adjustment */
+    font-size: 5.5em; /* Font size adjustment */
 }
 /* Base styles for the images */
-.AD .dis-numbers img {
+.column-one .dis-numbers img {
     max-width: 100%; /* Ensure images are responsive */
     height: auto;
 }
 
 /* Styles for mobile devices */
 @media (max-width: 768px) {
-    .AD .dis-numbers img {
+    .column-one .dis-numbers img {
         width: 30px; /* Adjust the size of the images for mobile view */
     }
 }
@@ -585,15 +557,15 @@ Poster-3{
     font-size: 1em; /* Font size adjustment */
 }
 
- .UXA h3 {
+ .Template h3 {
     margin-left: 70px;
     margin-top: 100px;
-    font-size: 25px;
+    font-size: 27px;
     line-height: 1.5;
     margin-bottom: 40px;
 }
 
-.UXA img {
+.Template img {
     display: block; /* Make the image a block element to center it */
     width: 86%; /* Set the width of the image */
     border-radius: 10px;
@@ -618,13 +590,13 @@ Poster-3{
 
 /* Tablet CSS */
 @media (max-width: 768px) {
-    .AD {
+    .column-one {
         font-size: 15px;
         width: 80%;
         padding: 15px 15px;
     }
 
-    .AD h3, .AD p {
+    .column-one h3, .column-one p {
         padding: 15px 30px;
     }
 
@@ -633,14 +605,14 @@ Poster-3{
         gap: 15px;
     }
 
-    .UXA h3 {
+    .Template h3 {
         margin-left: 50px;
         margin-right: 50px;
         margin-top: 80px;
         font-size: 20px;
     }
 
-    .UXA img {
+    .Template img {
         width: 95%;
         margin-bottom: 15px;
     }
@@ -656,12 +628,12 @@ Poster-3{
 
 /* Mobile CSS */
 @media (max-width: 480px) {
-    .AD {
+    .column-one {
         width: 80%;
         padding: 10px 10px;
     }
 
-    .AD h3, .AD p {
+    .column-one h3, .column-one p {
         padding: 10px 20px;
         font-size: 12px;
     }
@@ -685,7 +657,7 @@ Poster-3{
         font-size: 1em;
     }
 
-    .UXA h3 {
+    .Template h3 {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 60px;
@@ -971,3 +943,5 @@ Poster-3{
         width: calc(100% - 20px); /* Display one image per row on mobile devices */
     }
 }
+
+ 

@@ -66,7 +66,7 @@ body {
   margin-left: 150px;
 }
 
-* Tablet screen styles (max-width: 768px) */
+/* Tablet screen styles (max-width: 768px) */
 @media (max-width: 768px) {
   /* Adjustments for tablet screens */
   .menu-bar {
@@ -79,6 +79,7 @@ body {
 
   .menu-bar a {
     padding-right: 30px;
+    font-size: 12px;
   }
 
   .below-bar .left .name {
@@ -93,52 +94,85 @@ body {
     margin-left: 10px;
   }
 
+  .menu-bar{
+    font-size: 10px;
+  }
+
   .menu-bar a {
     padding-right: 10px;
+    font-size: 10px;
   }
 
   .below-bar .left .name {
     margin-left: 30px;
   }
 }
-
+/* Default styles */
 .artabout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; /* Gap between grid items */
-    justify-content: space-between;
-    width: 100%;
-    color: black;
-  }
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-gap: 20px; /* Gap between grid items */
+  justify-content: center; /* Center the single column */
+  width: 40%;
+  color: black;
+  margin: auto;
+  margin-top: 50px;
+}
 
-  .Artiststatment {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2; /* Adjust column start */
-    grid-column-end: 3; /* Adjust column end */
+.Artiststatment {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.artbio {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-bottom: 200px;
+}
+
+.artbio a {
+  text-decoration: none;
+  color: black;
+}
+
+.artabout h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.artabout p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Media queries for tablets (min-width: 601px and max-width: 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .artabout {
+    grid-template-columns: 1fr; /* Keep single column layout for tablets */
+    width: 50%;
+  }
+}
+
+/* Media queries for mobile devices (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  .artabout {
+    grid-gap: 10px; /* Adjust gap for mobile */
+    width: 60%;
   }
 
   .artbio {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2; /* Adjust column start */
-    grid-column-end: 3; /* Adjust column end */
-    margin-bottom: 200px;
-  }
-  .artbio a{
-    text-decoration: none;
-    color: black;
+    margin-bottom: 100px; /* Adjust margin for mobile */
   }
 
   .artabout h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px; /* Adjust font size for mobile */
   }
 
   .artabout p {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 12px; /* Adjust font size for mobile */
   }
+}
+
 
 .click {
   position: fixed;
@@ -156,15 +190,19 @@ body {
 
 .cover {
   width: 60%;
-  display: flex;
   margin: auto;
-  margin-left: 200px;
+  margin-left: 200px; /* Adjust left margin */
   margin-bottom: 100px;
   padding: auto;
 }
 
 .cover h3 {
   margin-bottom: 0px;
+  font-size: 24px; /* Default font size for h3 */
+}
+.cover p {
+  margin-bottom: 0px;
+  font-size: 14px; /* Default font size for h3 */
 }
 
 .img img {
@@ -189,6 +227,20 @@ body {
 
 /* Media query for tablet screens */
 @media (max-width: 768px) {
+  .cover {
+    width: 70%;
+    margin-left: 100px; /* Adjust left margin for tablets */
+    padding: 0; /* Remove padding on tablets */
+  }
+
+  .cover h3 {
+    font-size: 20px; /* Adjust font size for tablets */
+  }
+
+  .img img {
+    width: 100%; /* Set images to full width */
+  }
+
   .imgdiv {
     flex-direction: column; /* Change to column layout */
     margin-left: 0;
@@ -203,11 +255,23 @@ body {
 /* Media query for mobile screens */
 @media (max-width: 480px) {
   .cover {
-    width: 100%;
-    margin-left: 0; /* Remove left margin on mobile */
+    width: 70%;
+    margin-left: 70px; /* Adjust left margin for mobile */
     padding: 0; /* Remove padding on mobile */
   }
 
+  .cover h3 {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .cover p{
+    font-size: 12px;
+  }
+
+  .img img {
+    width: 100%; /* Set images to full width */
+  }
+
   .imgdiv {
     flex-direction: column; /* Change to column layout */
     margin-left: 0;
@@ -220,41 +284,4 @@ body {
 }
 
 
-/* Media query for tablet screens */
-@media (max-width: 768px) {
-  .cover {
-    width: 100%;
-    margin: auto;
-  }
-
-  .img img {
-    width: 100%;
-  }
-
-  .imgdiv img {
-    width: 100%;
-  }
-}
-
-/* Media query for mobile screens */
-@media (max-width: 480px) {
-  .cover {
-    width: 100%;
-    margin: auto;
-  }
-
-  .img img {
-    width: 100%;
-  }
-
-  .imgdiv {
-    flex-direction: column;
-    margin-left: 0;
-  }
-
-  .imgdiv img {
-    width: 100%;
-    margin: 7px 0;
-  }
-}
 
