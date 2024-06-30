@@ -697,12 +697,15 @@ Poster-3{
     align-items: flex-start;
     gap: 60px;
     margin-bottom: 40px;
+   
 }
 
 .emailB img {
     border-radius: 5px;
     max-width: 90%;
     height: auto;
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .headers {
@@ -743,7 +746,8 @@ Poster-3{
     }
 
     .headers img {
-        margin: 20px;
+      width: calc(100% - 20px);
+      margin: 20px;
     }
 
     .headers-zoom {
@@ -753,6 +757,18 @@ Poster-3{
     .headers-zoom img {
         margin: 20px;
     }
+
+    .emailB {
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .emailB img {
+        max-width: 100%; /* Ensure images fill container width */
+        margin: 10px 0; /* Adjust vertical margin */
+    }
+
+   
 }
 
 /* Mobile CSS */
@@ -775,6 +791,18 @@ Poster-3{
         border-radius: 2px;
         width: calc(100% - 20px);
     }
+
+    .emailB {
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .emailB img {
+        max-width: 100%; /* Ensure images fill container width */
+        margin: 10px 0; /* Adjust vertical margin */
+    }
+
+  
 }
 
 
