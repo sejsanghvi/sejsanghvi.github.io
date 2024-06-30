@@ -198,6 +198,15 @@ canvas {
     width: 60%; /* Adjusted width for smaller screens */
     font-size: 12px; /* Adjusted font size */
   }
+
+  .bio ,
+  .resume {
+    width: 100%;
+  }
+  .bio p,
+  .resume p {
+    font-size: 14px;
+  }
 }
 
 /* Media queries for mobile devices */
@@ -240,9 +249,14 @@ canvas {
     font-size: 11px; /* Adjusted font size */
   }
 
+  .bio ,
+  .resume {
+    width: 100%;
+  }
+
   .bio p,
   .resume p {
-    font-size: 14px; /* Adjust font size for paragraphs */
+    font-size: 12px; /* Adjust font size for paragraphs */
   }
 }
 
