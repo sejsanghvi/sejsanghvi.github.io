@@ -105,6 +105,9 @@ canvas {
   justify-content: center;
   text-align: center;
 }
+.grid-item a{
+  text-decoration: none;
+}
 
 .grid-item img {
   width: 90%; /* Reduced image size */
