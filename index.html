@@ -27,9 +27,8 @@
       <div class="right">
         <!-- Navigation links -->
         <a href="docs/about.html">ABOUT</a>
-          <a href="docs/design.html">DESIGN</a>
-          <a href="docs/art.html">ART</a>
-       
+        <a href="docs/design.html">DESIGN</a>
+        <a href="docs/art.html">ART</a>
       </div>
     </div>
     <!-- Main content area -->
@@ -42,19 +41,20 @@
           <div class="left">
             <!-- Stylish introduction with line breaks -->
             <span class="name">
-              <i>Hi,<br> 
-              I am Sejal Sanghvi<br> 
-              A Visual Designer,<br>
-              A UI/UX Specialist,<br>
-              A Creative Coder<br> 
-              <br>
-              I create<br>
-              Pixel-Perfect Designs<br> 
-              <br>                       
-              Through <br>
-              Design,<br>
-              Code,<br>
-              or Blend of Both
+              <i>
+                Hi,<br>
+                I am Sejal Sanghvi<br>
+                A Visual Designer,<br>
+                A UI/UX Specialist,<br>
+                A Creative Coder<br>
+                <br>
+                I create<br>
+                Pixel-Perfect Designs<br>
+                <br>
+                Through<br>
+                Design,<br>
+                Code,<br>
+                or Blend of Both
               </i>
             </span>
           </div>
@@ -62,7 +62,8 @@
       </div>
     </div>
   </div>
-<!-- JavaScript import map for modules -->
+
+  <!-- JavaScript import map for modules -->
   <script type="importmap">
     {
       "imports": {
@@ -73,72 +74,53 @@
 
   <!-- JavaScript module for WebGL fluid simulation -->
   <script type="module">
-    // Importing the required module
     import webGLFluidEnhanced from 'webgl-fluid-enhanced';
-    // Retrieving saved configuration from local storage
+
     const savedConfig = localStorage.getItem('fluidConfig');
-    // Setting active configuration or using default if no saved config exists
     const activeConfig = savedConfig ? JSON.parse(savedConfig) : {};
 
-    // Function to initialize the canvas and start the WebGL fluid simulation
     function initializeCanvas() {
       const canvas = document.createElement('canvas');
       document.body.appendChild(canvas);
       webGLFluidEnhanced.simulation(canvas, activeConfig);
 
-      // Updating configuration if saved config exists
       if (savedConfig) updateConfigFromLocalStorage(activeConfig);
     }
 
-      function updateConfigFromLocalStorage(config) {
-        document.getElementById('sim-resolution').value = config.SIM_RESOLUTION;
-        document.getElementById('dye-resolution').value = config.DYE_RESOLUTION;
-        document.getElementById('capture-resolution').value = config.CAPTURE_RESOLUTION;
-        document.getElementById('density-dissipation').value = config.DENSITY_DISSIPATION;
-        document.getElementById('velocity-dissipation').value = config.VELOCITY_DISSIPATION;
-        document.getElementById('pressure').value = config.PRESSURE;
-        document.getElementById('pressure-iterations').value = config.PRESSURE_ITERATIONS;
-        document.getElementById('curl').value = config.CURL;
-        document.getElementById('initial').value = config.INITIAL;
-        document.getElementById('splat-amount').value = config.SPLAT_AMOUNT;
-        document.getElementById('splat-radius').value = config.SPLAT_RADIUS;
-        document.getElementById('splat-force').value = config.SPLAT_FORCE;
-        document.getElementById('splat-key').value = "'" + config.SPLAT_KEY + "'";
-        document.getElementById('shading').value = config.SHADING;
-        document.getElementById('colorful').value = config.COLORFUL;
-        document.getElementById('color-update-speed').value = config.COLOR_UPDATE_SPEED;
-        document.getElementById('color-palette').value = JSON.stringify(config.COLOR_PALETTE);
-        document.getElementById('hover').value = config.HOVER;
-        document.getElementById('back-color').value = "'" + config.BACK_COLOR + "'";
-        document.getElementById('transparent').value = config.TRANSPARENT;
-        document.getElementById('brightness').value = config.BRIGHTNESS;
-        document.getElementById('bloom').value = config.BLOOM;
-        document.getElementById('bloom-iterations').value = config.BLOOM_ITERATIONS;
-        document.getElementById('bloom-resolution').value = config.BLOOM_RESOLUTION;
-        document.getElementById('bloom-intensity').value = config.BLOOM_INTENSITY;
-        document.getElementById('bloom-threshold').value = config.BLOOM_THRESHOLD;
-        document.getElementById('bloom-soft-knee').value = config.BLOOM_SOFT_KNEE;
-        document.getElementById('sunrays').value = config.SUNRAYS;
-        document.getElementById('sunrays-resolution').value = config.SUNRAYS_RESOLUTION;
-        document.getElementById('sunrays-weight').value = config.SUNRAYS_WEIGHT;
-      }
-
-      window.addEventListener('keydown', (e) => {
-        if (e.code === 'KeyP') webGLFluidEnhanced.pause(true);
+    function updateConfigFromLocalStorage(config) {
+      const ids = [
+        'sim-resolution', 'dye-resolution', 'capture-resolution', 
+        'density-dissipation', 'velocity-dissipation', 'pressure', 
+        'pressure-iterations', 'curl', 'initial', 'splat-amount', 
+        'splat-radius', 'splat-force', 'splat-key', 'shading', 
+        'colorful', 'color-update-speed', 'color-palette', 'hover', 
+        'back-color', 'transparent', 'brightness', 'bloom', 
+        'bloom-iterations', 'bloom-resolution', 'bloom-intensity', 
+        'bloom-threshold', 'bloom-soft-knee', 'sunrays', 
+        'sunrays-resolution', 'sunrays-weight'
+      ];
+      ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) element.value = config[id.toUpperCase().replace(/-/g, '_')] || '';
       });
+    }
 
-      window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
-        initializeCanvas();
-      });
-    </script>
-   <!-- General JavaScript -->
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'KeyP') webGLFluidEnhanced.pause(true);
+    });
+
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').classList.add('loaded');
+      initializeCanvas();
+    });
+  </script>
+
+  <!-- General JavaScript -->
   <script>
-    // Preloader functionality
-    var loader = document.getElementById("preloader");
     window.addEventListener('load', function() {
       document.getElementById('preloader').classList.add('loaded');
     });
   </script>
 </body>
 </html>
+
