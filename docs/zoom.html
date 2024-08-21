@@ -226,10 +226,15 @@
   </div>
    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
    <script>
-      var loader = document.getElementById("preloader");
-
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        var preloader = document.getElementById('preloader');
+        var content = document.querySelector('.content');
+        
+        // Hide preloader and show content when the page is fully loaded
+        preloader.classList.add('loaded');
+        setTimeout(function() {
+          content.style.display = 'block';
+        }, 500); // Delay to ensure preloader fade-out
       });
     </script>
     

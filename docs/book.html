@@ -1,68 +1,66 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+  <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
 <body class="is-preload">
-    <!-- Preloader -->
-    <div id="preloader"></div>
-    <div class="back">
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Main content -->
+  <div class="back">
     <div class="menu-bar">
-        <div class="left">
-            <span><a href="../index.html">SEJAL SANGHVI</a></span>
-        </div>
-        <div class="right">
-            <a href="design.html">CLOSE</a>
-            
-        </div>
+      <div class="left">
+        <span><a href="../index.html">SEJAL SANGHVI</a></span>
+      </div>
+      <div class="right">
+        <a href="design.html">CLOSE</a>
+      </div>
     </div>
 
     <div class="book">
       <div class="cover">
-        <img src="Image/Free_Book_Mockup_0.png">
-      
-          <h4> Publication Deisgn—'the art of less'  </h4>
-          <p> Book—'the art of less' is a collaboration project that delves into the world of minimalism in art, design, and fashion. Drawing upon the insightful research conducted by my collaborator, 'the art of less' has been crafted as a true embodiment of the principles of minimalism—simple, elegant, and sleek.<p>
+        <img src="Image/Free_Book_Mockup_0.png" alt="Book Mockup">
+        <h4>Publication Design—'the art of less'</h4>
+        <p>Book—'the art of less' is a collaboration project that delves into the world of minimalism in art, design, and fashion. Drawing upon the insightful research conducted by my collaborator, 'the art of less' has been crafted as a true embodiment of the principles of minimalism—simple, elegant, and sleek.</p>
       </div>
       <div class="Book-1">
-        <img src="Image/OMYB9R1.png">
-        <img src="Image/OMYB9R2.png">
-        <img src="Image/OMYB9R3.png">
-        <img src="Image/OMYB9R4.png">
-        <img src="Image/OMYB9R6.png">
-        <img src="Image/OMYB9R7.png">
-        <img src="Image/OMYB9R8.png"> 
-        <img src="Image/OMYB9R9.png"> 
-        <img src="Image/OMYB9R12.png"> 
-        <img src="Image/OMYB9R13.png"> 
-        <img src="Image/OMYB9R15.png"> 
-        <img src="Image/OMYB9R10.png"> 
+        <img src="Image/OMYB9R1.png" alt="Book Image 1">
+        <img src="Image/OMYB9R2.png" alt="Book Image 2">
+        <img src="Image/OMYB9R3.png" alt="Book Image 3">
+        <img src="Image/OMYB9R4.png" alt="Book Image 4">
+        <img src="Image/OMYB9R6.png" alt="Book Image 5">
+        <img src="Image/OMYB9R7.png" alt="Book Image 6">
+        <img src="Image/OMYB9R8.png" alt="Book Image 7">
+        <img src="Image/OMYB9R9.png" alt="Book Image 8">
+        <img src="Image/OMYB9R12.png" alt="Book Image 9">
+        <img src="Image/OMYB9R13.png" alt="Book Image 10">
+        <img src="Image/OMYB9R15.png" alt="Book Image 11">
+        <img src="Image/OMYB9R10.png" alt="Book Image 12">
       </div>
-  </div>
- 
-  <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, 
-      apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to 
-      creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
-  </div>
-   
     </div>
-</div>
-<script>
-      var loader = document.getElementById("preloader");
 
+    <div class="bottom">
+      <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="mailto:sejalsnghv@gmail.com">EMAIL</a> | <a href="https://www.linkedin.com/in/sejsanghvi">LINKEDIN</a> | <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        var preloader = document.getElementById('preloader');
+        var content = document.querySelector('.content');
+        
+        // Hide preloader and show content when the page is fully loaded
+        preloader.classList.add('loaded');
+        setTimeout(function() {
+          content.style.display = 'block';
+        }, 500); // Delay to ensure preloader fade-out
       });
     </script>
 </body>

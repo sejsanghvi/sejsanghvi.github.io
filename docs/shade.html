@@ -2,58 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+    <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
     
-    <link rel="stylesheet" href="artstyle.css">
+    <link rel="stylesheet" href="artstyle.css" />
   </head>
-  <body>
-    <body class="is-preload">
+  <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    <div>
     <div class="overlay"></div>
     <div class="menu-bar">
-        <div class="left">
-            <span class="name"><a href="art.html">SEJAL SANGHVI</a></span>
+      <div class="left">
+        <span class="name"><a href="art.html">SEJAL SANGHVI</a></span>
+      </div>
+      <div class="right">
+        <!-- <a href="artabout.html">ABOUT</a> -->
+        <div class="work">
+          <a href="art.html">CLOSE</a>
         </div>
-        <div class="right">
-            <!-- <a href="artabout.html">ABOUT</a> -->
-            <div class="work">
-                <a href="art.html">CLOSE</a>
-                
-            </div>
-        </div>
+      </div>
     </div>
-    </div>
+
     <div class="artpage">
- <div class="cover">
-    <div>
+      <div class="cover">
         <h3>Shade</h3>
-         <span id="info"><i>Projection on wall, 2023</i></span> 
-        <p>Shade is a serene and meditative room through the interplay of changing shadows, drawing inspiration from Zen Buddhism's principles of impermanence and tranquillity. It emphasizes minimal aesthetics, prioritizing the visitor's inner experience over physical objects, and incorporates binaural theta beats to reduce anxiety and induce relaxation. Natural light is captured, processed, and reintroduced into the space, fostering a space away from the noise; a space to pause; a space to reconnect. This body of art is a space to breathe; to witness time; to acknowledge impermanence.</p>
+        <span id="info"><i>Projection on wall, 2023</i></span> 
+        <p>
+          Shade is a serene and meditative room through the interplay of changing shadows, drawing inspiration from Zen Buddhism's principles of impermanence and tranquillity. It emphasizes minimal aesthetics, prioritizing the visitor's inner experience over physical objects, and incorporates binaural theta beats to reduce anxiety and induce relaxation. Natural light is captured, processed, and reintroduced into the space, fostering a space away from the noise; a space to pause; a space to reconnect. This body of art is a space to breathe; to witness time; to acknowledge impermanence.
+        </p>
+      </div>
+
+      <div class="img">
+        <img src="ArtImages/Sanghvi_Sej 03.png" alt="Shade Image 1">
+        <div class="imgdiv">
+          <img src="ArtImages/Sanghvi_Sej 02.jpg" alt="Shade Image 2">
+          <img src="ArtImages/Sanghvi_Sej 04.jpg" alt="Shade Image 3">
+          <img src="ArtImages/Sanghvi_Sej 01.jpg" alt="Shade Image 4">
+        </div>
+      </div>
     </div>
-</div>
-<div class="img">
-    <img src="ArtImages/Sanghvi_Sej 03.png">
-<div class="imgdiv">
-    <img src="ArtImages/Sanghvi_Sej 02.jpg">
-    <img src="ArtImages/Sanghvi_Sej 04.jpg">
-    <img src="ArtImages/Sanghvi_Sej 01.jpg">
-</div>
-</div>
- </div>
-</div>
-<script>
+
+    <script>
       var loader = document.getElementById("preloader");
 
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        loader.classList.add('loaded');
       });
     </script>
   </body>

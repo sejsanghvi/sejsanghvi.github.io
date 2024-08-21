@@ -1,88 +1,86 @@
 <!doctype html>
 <html>
   <head>
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
+    <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+    <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
     
-    <link rel="stylesheet" href="style.css">
-   
-    
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
   </head>
-  <body>
-
-    <body class="is-preload">
+  <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader"></div>
 
     <div class="back">
-    <canvas></canvas>
-    <div class="back">
-    <div class="menu-bar">
+      <canvas></canvas>
+      <div class="menu-bar">
         <div class="left">
-            <span><a href="../index.html">SEJAL SANGHVI</a></span>
+          <span><a href="../index.html">SEJAL SANGHVI</a></span>
         </div>
         <div class="right">
-            <a href="design.html">CLOSE</a>
-            
+          <a href="design.html">CLOSE</a>
         </div>
+      </div>
+
+      <div class="book">
+        <div class="cover">
+          <img src="Image/Playbook.png" alt="Playbook">
+          <h4>Visual Design For EXACT Sciences' Launch Playbook Guide</h4> 
+          <p>
+            Collaborated on a team project to design an impactful eBook utilizing layout design expertise and data visualization techniques, transforming provided content into a visually engaging and informative resource.
+          </p>
+        </div>
+
+        <div class="vid-zoom">
+          <video
+            id="my-video"
+            class="video-js vjs-fill vjs-16-9 vjs-fluid"
+            controls
+            preload="auto"
+            data-setup="{}"
+          >
+            <source src="Image/LP.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="Template">
+          <img src="Image/playbook1.png" alt="Playbook 1">
+          <img src="Image/playbook2.png" alt="Playbook 2">
+          <img src="Image/playbook3.png" alt="Playbook 3">
+          <img src="Image/playbook5.png" alt="Playbook 5">
+          <img src="Image/playbook7.png" alt="Playbook 7">
+          <img src="Image/playbook11.png" alt="Playbook 11">
+          <img src="Image/playbook13.png" alt="Playbook 13">
+          <img src="Image/playbook18.png" alt="Playbook 18">
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>
+          I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br>
+          <a href="mailto:sejalsnghv@gmail.com">EMAIL</a> | 
+          <a href="https://www.linkedin.com/in/sejsanghvi">LINKEDIN</a> | 
+          <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a>
+        </span>
+      </div>
     </div>
 
-    <div class="book">
-      <div class="cover">
-        <img src="Image/Playbook.png">
-          <h4> Visual Design For EXACT Sciences' Launch Playbook Guide</h4> 
-          <p>Collaborated on a team project to design an impactful eBook utilizing layout design expertise and data visualization techniques, transformed provided content into a visually engaging and informative resource.</p>
-      </div>
-
-      <div class="vid-zoom">
-      <video
-    id="my-video"
-    class="video-js vjs-fill vjs-16-9 vjs-fluid"
-    responsive="true"
-    controls
-    preload="auto"
-  
-    data-setup="{}"
-  >
-    <source src="Image/LP.mp4" type="video/mp4" />
-    
-  </video>
-
- </div>
-<br>
-<br>
-<br>
-<br>
-      <div class="Template">
-        <img src="Image/playbook1.png">
-         <img src="Image/playbook2.png">
-          <img src="Image/playbook3.png">
-           <img src="Image/playbook5.png">
-            <img src="Image/playbook7.png">
-              <img src="Image/playbook11.png">
-              <img src="Image/playbook13.png">
-              <img src="Image/playbook18.png">
-      </div>
-      
-      
- </div>
-
-  <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
-  </div>
-   <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-   <script>
-      var loader = document.getElementById("preloader");
-
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script>
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        var preloader = document.getElementById('preloader');
+        var content = document.querySelector('.content');
+        
+        // Hide preloader and show content when the page is fully loaded
+        preloader.classList.add('loaded');
+        setTimeout(function() {
+          content.style.display = 'block';
+        }, 500); // Delay to ensure preloader fade-out
       });
     </script>
-</body>
+  </body>
 </html>

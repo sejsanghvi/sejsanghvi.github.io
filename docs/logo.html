@@ -3,60 +3,69 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+    <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader"></div>
-    
+
     <div class="back">
-    <canvas></canvas>
-    <div class="back">
-    <div class="menu-bar">
+      <canvas></canvas>
+
+      <div class="menu-bar">
         <div class="left">
-            <span><a href="../index.html">SEJAL SANGHVI</a></span>
+          <span><a href="../index.html">SEJAL SANGHVI</a></span>
         </div>
         <div class="right">
-            <a href="design.html">CLOSE</a>
-            
+          <a href="design.html">CLOSE</a>
         </div>
+      </div>
+
+      <div class="book">
+        <div class="cover">
+          <img src="Image/VL.png" />
+          <h4>Brand Identity — Voldz Law P.C.</h4>
+          <p>
+            Executed a comprehensive rebranding initiative for Voldz Law P.C., featuring a griffon logo that symbolizes strength, courage, and protection—core qualities that reflect the firm's commitment to safeguarding clients' rights. The minimalistic design, incorporating clean lines and the color blue, conveys professionalism, trust, and elegance. This cohesive visual identity extends across various brand collaterals, including business cards and posters, ensuring a consistent and impactful presence.
+          </p>
+        </div>
+
+        <div class="logo-1">
+          <img src="Image/VL logo.jpg" />
+          <img src="Image/VL variants.jpg" />
+          <img src="Image/VL Font.png" />
+          <img src="Image/Business Card Mockup.jpg" />
+          <img src="Image/VL Poster.jpg" />
+          <img src="Image/Stationary.jpg" />
+          <img src="Image/web mock.jpg" />
+          <img src="Image/Voldz Law.jpg" />
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>
+          I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.
+          <br /><br />
+          <a href="mailto:sejalsnghv@gmail.com">EMAIL</a> |
+          <a href="https://www.linkedin.com/in/sejsanghvi">LINKEDIN</a> |
+          <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a>
+        </span>
+      </div>
     </div>
 
-    <div class="book">
-      <div class="cover">
-        <img src="Image/VL.png">
-          <h4>Brand Identity —Voldz Law P.C.</h4> 
-          <p>Executed a comprehensive rebranding initiative for Voldz Law P.C., featuring a griffon logo that symbolizes strength, courage, and protection—core qualities that reflect the firm's commitment to safeguarding clients' rights. The minimalistic design, incorporating clean lines and the color blue, conveys professionalism, trust, and elegance. This cohesive visual identity extends across various brand collaterals, including business cards and posters, ensuring a consistent and impactful presence. </i></p>
-      </div>
-      <div class="logo-1">
-        <img src="Image/VL logo.jpg">   
-        <img src="Image/VL variants.jpg">  
-        <img src="Image/VL Font.png">  
-        <img src="Image/Business Card Mockup.jpg">
-        <img src="Image/VL Poster.jpg"> 
-        <img src="Image/Stationary.jpg">  
-        <img src="Image/web mock.jpg">
-        <img src="Image/Voldz Law.jpg">
-      </div>
-  </div>
-  <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
-  </div>
-    </div>
-<script>
-      var loader = document.getElementById("preloader");
-
+    <script>
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        var preloader = document.getElementById('preloader');
+        var content = document.querySelector('.content');
+        
+        // Hide preloader and show content when the page is fully loaded
+        preloader.classList.add('loaded');
+        setTimeout(function() {
+          content.style.display = 'block';
+        }, 500); // Delay to ensure preloader fade-out
       });
     </script>
-</body>
+  </body>
 </html>

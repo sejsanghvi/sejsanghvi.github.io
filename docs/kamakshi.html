@@ -3,58 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+    <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <body class="is-preload">
+  <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader"></div>
-    
+
     <div class="back">
-    <canvas></canvas>
-    <div class="back">
-    <div class="menu-bar">
+      <canvas></canvas>
+
+      <div class="menu-bar">
         <div class="left">
-            <span><a href="../index.html">SEJAL SANGHVI</a></span>
+          <span><a href="../index.html">SEJAL SANGHVI</a></span>
         </div>
         <div class="right">
-            <a href="design.html">CLOSE</a>
-            
+          <a href="design.html">CLOSE</a>
         </div>
+      </div>
+
+      <div class="book">
+        <div class="cover">
+          <img src="Image/Kamakshi.png" />
+          <h4>Branding Design for Kamakshi Gold & Diamonds</h4>
+          <p>
+            Tailored Kamakshi’s brand identity, including meticulously integrating colors and fonts that aligned with the client’s vision. Collaborating with a female-led studio added a personal touch, as I admire female entrepreneurs' vision.
+          </p>
+        </div>
+
+        <div class="logo-1">
+          <img src="Image/KAMAKSHI copy5.png" />
+          <img src="Image/KAMAKSHI copy2.png" />
+          <img src="Image/KAMAKSHI copy4.png" />
+          <img src="Image/KAMAKSHI copy3.png" />
+          <img src="Image/KAMAKSHI copy6.png" />
+          <img src="Image/KAMAKSHI copy7.png" />
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>
+          I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.
+          <br /><br />
+          <a href="mailto:sejalsnghv@gmail.com">EMAIL</a> |
+          <a href="https://www.linkedin.com/in/sejsanghvi">LINKEDIN</a> |
+          <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a>
+        </span>
+      </div>
     </div>
 
-    <div class="book">
-      <div class="cover">
-        <img src="Image/Kamakshi.png">
-          <h4>Branding Design for Kamakshi Gold & Diamonds</h4> 
-          <p>Tailored Kamakshi’s brand identity, included meticulously integrating colors and fonts that aligned with the client’s vision. Collaborating with a female-led studio added a personal touch, as I admire female entrepreneurs'vision. </i></p>
-      </div>
-      <div class="logo-1">
-        <img src="Image/KAMAKSHI copy5.png">   
-        <img src="Image/KAMAKSHI copy2.png">  
-        <img src="Image/KAMAKSHI copy4.png">  
-        <img src="Image/KAMAKSHI copy3.png"> 
-        <img src="Image/KAMAKSHI copy6.png">
-        <img src="Image/KAMAKSHI copy7.png">
-      </div>
-  </div>
-  <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
-  </div>
-    </div>
-<script>
-      var loader = document.getElementById("preloader");
-
+    <script>
       window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
+        var preloader = document.getElementById('preloader');
+        var content = document.querySelector('.content');
+        
+        // Hide preloader and show content when the page is fully loaded
+        preloader.classList.add('loaded');
+        setTimeout(function() {
+          content.style.display = 'block';
+        }, 500); // Delay to ensure preloader fade-out
       });
     </script>
-</body>
+  </body>
 </html>

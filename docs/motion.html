@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -10,15 +11,16 @@
     <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
     
     <link rel="stylesheet" href="style.css">
-    
-    
+
+   
+
   </head>
   <body>
+    
     <body class="is-preload">
     <!-- Preloader -->
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
 
-    <div class="back">
     <canvas></canvas>
     <div class="back">
     <div class="menu-bar">
@@ -33,34 +35,44 @@
 
     <div class="book">
       <div class="cover">
-        <img src="Image/Poster.jpg">
-          <h4>Typographic Poster Design</h4>
-          <p>Designed a dynamic poster series for a fitness studio with the overarching goal of promoting physical activity for enhanced mental health.As a kickboxing instructor, I'm passionate about using fitness to enhance mental health. This poster series aims to inspire individuals to prioritize their well-being through activities like kickboxing, yoga, and weight training, resonating emotionally to encourage action.</i></p> 
+        <img src="Image/Move your mental health.gif">
+         <h4>Collection of Motion Graphics </h4>
+         <p>A curated collection of diverse motion graphics I've designed and animated. Each piece was created using Adobe After Effects, showcasing my skills in bringing visual concepts to life through motion.</p>
+          </p> 
+    
       </div>
-      <div class="poster-grid">
-      <div class="Poster-2">
-        <img src="Image/POSTER2.jpg">
-          
-      </div><br>
-      <div class="Poster-1">
-        <img src="Image/POSTER1.jpg">
-          
-      </div><br>
-      
-      <div class="Poster-3">
-        <img src="Image/POSTER3.jpg">
-          
-      </div>
+   
+   <div class="vid-zoom">
+      <video
+    id="my-video"
+    class="video-js vjs-fill vjs-16-9 vjs-fluid"
+    responsive="true"
+    controls
+    preload="auto"
+  
+    data-setup="{}"
+  >
+    <source src="Image/Move your mental health.mp4" type="video/mp4" />
+    
+  </video>
+
+ </div>
   </div>
+
+
   <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, 
+    <span>
+     
+      I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, 
       apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to 
       creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
   </div>
    
    
 </div>
-<script>
+ <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+ 
+   <script>
       window.addEventListener('load', function() {
         var preloader = document.getElementById('preloader');
         var content = document.querySelector('.content');

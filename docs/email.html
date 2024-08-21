@@ -3,85 +3,95 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sejal Sanghvi Portfolio Website"
-    />
-    <title>Sejal Sanghvi- Visual Designer & Fine Artist</title>
-    
-    <link rel="stylesheet" href="style.css">
- 
+    <meta name="description" content="Sejal Sanghvi Portfolio Website" />
+    <title>Sejal Sanghvi - Visual Designer & Fine Artist</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <body class="is-preload">
+  <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader"></div>
 
     <div class="back">
-    <canvas></canvas>
-    <div class="back">
-    <div class="menu-bar">
+      <canvas></canvas>
+      <div class="menu-bar">
         <div class="left">
-            <span><a href="../index.html">SEJAL SANGHVI</a></span>
+          <span><a href="../index.html">SEJAL SANGHVI</a></span>
         </div>
         <div class="right">
-            <a href="design.html">CLOSE</a>
-            
+          <a href="design.html">CLOSE</a>
         </div>
+      </div>
+
+      <div class="book">
+        <div class="cover">
+          <img src="Image/Email-home.png" />
+          <h4>Email Design for EXACT SCIENCES</h4>
+          <p>
+            The main focus was to create a variety of email templates for EXACT Sciences' launch,
+            each offering a wide range of headers to cater to different communication needs.
+            Carefully considered the target audience and specific goals for each template, and
+            designed the emails aligned with the brand’s identity, color scheme, and client requirements.
+          </p>
+        </div>
+
+        <div class="Template">
+          <h3>Design Iterations</h3>
+        </div>
+
+        <div class="headers">
+          <img src="Image/Artboard – 17.png" />
+          <img src="Image/Artboard – 18.png" />
+          <img src="Image/Artboard – 16.png" />
+          <img src="Image/Artboard – 20.png" />
+          <img src="Image/Artboard – 21.png" />
+          <img src="Image/Artboard – 23.png" />
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="Template">
+          <h3>Final Designs</h3>
+        </div>
+
+        <div class="emailB">
+          <img src="Image/D6.png" />
+          <img src="Image/M6.png" />
+        </div>
+        <div class="emailB">
+          <img src="Image/D1.png" />
+          <img src="Image/M1.png" />
+        </div>
+        <div class="emailB">
+          <img src="Image/D2.png" />
+          <img src="Image/M2.png" />
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>
+          I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management.
+          Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.
+          <br /><br />
+          <a href="mailto:sejalsnghv@gmail.com">EMAIL</a> |
+          <a href="https://www.linkedin.com/in/sejsanghvi">LINKEDIN</a> |
+          <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a>
+        </span>
+      </div>
+
+      <script>
+        window.addEventListener('load', function () {
+          var preloader = document.getElementById('preloader');
+          var content = document.querySelector('.content');
+          
+          // Hide preloader and show content when the page is fully loaded
+          preloader.classList.add('loaded');
+          setTimeout(function () {
+            content.style.display = 'block';
+          }, 500); // Delay to ensure preloader fade-out
+        });
+      </script>
     </div>
-
-    <div class="book">
-      <div class="cover">
-        <img src="Image/Email-home.png">
-          <h4>Email Design for EXACT SCIENCES</h4> 
-          <p>The main focus was to create a variety of email templates for EXACT Sciences' launch, each offering a wide range of headers to cater to different communication needs. Carefully considered the target audience and specific goals for each template, and designed  the emails aligned with the brand’s identity, color scheme, and client requirements. </p>
-      </div>
-
-      <div class="Template">
-        <h3>Design Iterations</h3>
-      </div>
-    <div class="headers">
-     <img src="Image/Artboard – 17.png">
-     <img src="Image/Artboard – 18.png">
-     <img src="Image/Artboard – 16.png">
-     <img src="Image/Artboard – 20.png">
-     <img src="Image/Artboard – 21.png">
-     <img src="Image/Artboard – 23.png">
-  </div>
-
-<br>
-<br>
-<br>
-
-<div class="Template">
-        <h3>Final Designs</h3>
-      </div>
- <div class="emailB">
- <img src="Image/D6.png">
- <img src="Image/M6.png">
-</div>
-<div class="emailB">
- <img src="Image/D1.png">
- <img src="Image/M1.png">
-</div>
-<div class="emailB">
- <img src="Image/D2.png">
- <img src="Image/M2.png">
-</div>
-</div>
-
-    
-</div>
-  <div class="bottom">
-    <span>I'm Sejal Sanghvi, a Visual Designer and Fine Artist, passionate about creating pixel-perfect designs across brand identities, apps, prototyping, coding, and product management. Whether it's through design, code, or a blend of both, I'm committed to creating user-centric digital solutions.<br><br><a href="https://www.sejalsnghv@gmail.com">EMAIL </a>|<a href="https://www.linkedin.com/in/sejsanghvi"> LINKEDIN </a>| <a href="https://www.instagram.com/thesej_saga/">INSTAGRAM</a></span>
-  </div>
-   <script>
-      var loader = document.getElementById("preloader");
-
-      window.addEventListener('load', function() {
-        document.getElementById('preloader').classList.add('loaded');
-      });
-    </script>
-    
-</body>
+  </body>
 </html>
