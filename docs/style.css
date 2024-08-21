@@ -29,6 +29,34 @@ canvas {
   z-index: 0;
 }
 
+ /* Hide page content initially */
+      .content {
+        display: none;
+      }
+
+
+    /* Preloader Styles */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000; /* Black background */
+      color: #fff; /* White text color */
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+    }
+    #preloader.loaded {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+
 /* Menu bar styles */
 .menu-bar, .below-bar, .grid-container, .bottom, .bio, .resume, .bottom-web {
   width: 100%;
